@@ -1,0 +1,6376 @@
+# Override file to override generated metadata.
+#
+# Example:
+# gui.staff.title:
+#   category: gui
+#   description: Title displayed at the top of the shop staff management GUI.
+#   audience:
+#     - shop-owner
+#
+# player-bought-from-your-store-tax:
+#   category: transactions
+#   description: Sent to a shop owner when another player purchases from their shop and tax is charged.
+#   audience:
+#     - shop-owner
+#   placeholders:
+#     "0": Buyer
+#     "1": Amount purchased
+#     "2": Item
+#     "3": Earnings
+#     "4": Tax charged
+
+3rd-plugin-build-check-failed:
+  category: protection
+  description: Message shown when a third-party protection plugin denies a shop build or placement permission check.
+  audience:
+    - player
+  placeholders:
+    '0': Reason returned by the protection check
+3rd-plugin-build-check-failed-admin:
+  category: protection
+  description: Administrator-facing diagnostic shown when a third-party protection plugin denies a permission check, including
+    the listener that can be blacklisted if the denial is unexpected.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Reason returned by the protection check
+    '1': Protection listener or integration identifier
+_comment:
+  category: internal
+  description: Translator-facing comment directing contributors to the Crowdin translation project.
+  audience:
+    - translator
+about.invalid-donation-key:
+  category: general
+  description: Text displayed by the QuickShop about command for invalid donation key.
+  audience:
+    - player
+about.kofi-thanks:
+  category: general
+  description: Text displayed by the QuickShop about command for kofi thanks.
+  audience:
+    - player
+about.text:
+  category: about
+  description: Main multi-line output of the QuickShop about command, containing build, release, localization, and contributor
+    information.
+  audience:
+    - player
+  placeholders:
+    '0': QuickShop fork name
+    '1': QuickShop version
+    '2': Release type
+    '4': Language code
+    '5': Localized staff/contributor list
+about.valid-donation-key:
+  category: about
+  description: Status text shown when the configured donation key is valid and identifies the account it is bound to.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Account or identity bound to the donation key
+addon.bluemap.marker-description:
+  category: addon-bluemap
+  description: Description displayed for a QuickShop marker on BlueMap.
+  audience:
+    - player
+  placeholders:
+    '0': Shop display name
+    '1': Shop owner
+    '2': Item name
+    '3': Formatted price
+    '4': Item amount per trade
+    '5': Shop type
+    '6': Whether the shop has unlimited stock
+    '7': Shop location
+addon.bluemap.marker-name:
+  category: addon-bluemap
+  description: Compact name displayed for a QuickShop marker on BlueMap.
+  audience:
+    - player
+  placeholders:
+    '0': Shop display name
+    '2': Item name
+    '3': Formatted price
+    '4': Item amount per trade
+    '5': Shop type
+addon.bluemap.markerset-title:
+  category: addon-bluemap
+  description: Bluemap addon message or label for markerset title.
+  audience:
+    - player
+addon.chestprotect.protection-exists:
+  category: addon-chestprotect
+  description: Chestprotect addon message or label for protection exists.
+  audience:
+    - player
+addon.chestprotect.shops-exsts:
+  category: addon-chestprotect
+  description: Chestprotect addon message or label for shops exsts.
+  audience:
+    - player
+addon.discord.__to_message_designer:
+  category: addon-discord
+  description: Translator note linking to the Discord embed designer used to edit Discord notification templates.
+  audience:
+    - player
+addon.discord.__to_translators:
+  category: addon-discord
+  description: Translator note explaining the Discord addon placeholder syntax and how it differs from standard QuickShop
+    placeholders.
+  audience:
+    - translator
+  placeholders:
+    '0': Text System syntax (
+    '1': System syntax ( 0
+    '%%LANG_KEY%%': Discord template value for LANG_KEY.
+addon.discord.__to_users:
+  category: addon-discord
+  description: Configuration note explaining that Discord notifications follow the QuickShop language system.
+  audience:
+    - server-administrator
+addon.discord.commands.discord.description:
+  category: addon-discord
+  description: Description displayed for the discord command.
+  audience:
+    - player
+addon.discord.discord-disabled:
+  category: addon-discord
+  description: Confirmation or status message shown for discord disabled.
+  audience:
+    - player
+addon.discord.discord-enabled:
+  category: addon-discord
+  description: Confirmation or status message shown for discord enabled.
+  audience:
+    - player
+addon.discord.discord-messages.bought-from-your-shop:
+  category: addon-discord
+  description: Discord notification template for bought from your shop.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%purchase.amount%%': Discord template value for purchase amount.
+    '%%purchase.balance-formatted%%': Discord template value for purchase balance formatted.
+    '%%purchase.name%%': Discord template value for purchase name.
+    '%%purchase.taxes-formatted%%': Discord template value for purchase taxes formatted.
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%shop.item.name%%': Discord template value for shop item name.
+    '%%shop.stacking-amount%%': Discord template value for shop stacking amount.
+addon.discord.discord-messages.mod-remove-shop:
+  category: addon-discord
+  description: Discord notification template for mod remove shop.
+  audience:
+    - server-administrator
+  placeholders:
+    '%%delete.reason%%': Discord template value for delete reason.
+    '%%shop.display-name%%': Discord template value for shop display name.
+addon.discord.discord-messages.mod-shop-created:
+  category: addon-discord
+  description: Discord notification template for mod shop created.
+  audience:
+    - server-administrator
+  placeholders:
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%shop.item.name%%': Discord template value for shop item name.
+    '%%shop.owner.name%%': Discord template value for shop owner name.
+    '%%shop.stacking-amount%%': Discord template value for shop stacking amount.
+    '%%shop.type%%': Discord template value for shop type.
+addon.discord.discord-messages.mod-shop-price-changed:
+  category: addon-discord
+  description: Discord notification template for mod shop price changed.
+  audience:
+    - server-administrator
+  placeholders:
+    '%%change-price.from%%': Discord template value for change price from.
+    '%%change-price.to%%': Discord template value for change price to.
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%shop.owner.name%%': Discord template value for shop owner name.
+addon.discord.discord-messages.mod-shop-purchase:
+  category: addon-discord
+  description: Discord notification template for mod shop purchase.
+  audience:
+    - server-administrator
+  placeholders:
+    '%%purchase.amount%%': Discord template value for purchase amount.
+    '%%purchase.balance-formatted%%': Discord template value for purchase balance formatted.
+    '%%purchase.name%%': Discord template value for purchase name.
+    '%%purchase.taxes-formatted%%': Discord template value for purchase taxes formatted.
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%shop.item.name%%': Discord template value for shop item name.
+    '%%shop.stacking-amount%%': Discord template value for shop stacking amount.
+addon.discord.discord-messages.mod-shop-transfer:
+  category: addon-discord
+  description: Discord notification template for mod shop transfer.
+  audience:
+    - server-administrator
+  placeholders:
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%transfer.from%%': Discord template value for transfer from.
+    '%%transfer.to%%': Discord template value for transfer to.
+addon.discord.discord-messages.out-of-space:
+  category: addon-discord
+  description: Discord notification template for out of space.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%shop.display-name%%': Discord template value for shop display name.
+addon.discord.discord-messages.out-of-stock:
+  category: addon-discord
+  description: Discord notification template for out of stock.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%shop.display-name%%': Discord template value for shop display name.
+addon.discord.discord-messages.shop-permission-changed:
+  category: addon-discord
+  description: Discord notification template for shop permission changed.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%change-permission.perms-list%%': Discord template value for change permission perms list.
+    '%%change-permission.player%%': Discord template value for change permission player.
+    '%%change-permission.to-group%%': Discord template value for change permission to group.
+    '%%shop.display-name%%': Discord template value for shop display name.
+addon.discord.discord-messages.shop-price-changed:
+  category: addon-discord
+  description: Discord notification template for shop price changed.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%change-price.from%%': Discord template value for change price from.
+    '%%change-price.to%%': Discord template value for change price to.
+    '%%shop.display-name%%': Discord template value for shop display name.
+addon.discord.discord-messages.shop-transfer-to-you:
+  category: addon-discord
+  description: Discord notification template for shop transfer to you.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%transfer.from%%': Discord template value for transfer from.
+addon.discord.discord-messages.sold-to-your-shop:
+  category: addon-discord
+  description: Discord notification template for sold to your shop.
+  audience:
+    - shop-owner
+  placeholders:
+    '%%purchase.amount%%': Discord template value for purchase amount.
+    '%%purchase.balance-formatted%%': Discord template value for purchase balance formatted.
+    '%%purchase.name%%': Discord template value for purchase name.
+    '%%purchase.taxes-formatted%%': Discord template value for purchase taxes formatted.
+    '%%shop.display-name%%': Discord template value for shop display name.
+    '%%shop.item.name%%': Discord template value for shop item name.
+    '%%shop.stacking-amount%%': Discord template value for shop stacking amount.
+addon.discord.discord-not-integrated:
+  category: addon-discord
+  description: Discord addon message or label for discord not integrated.
+  audience:
+    - player
+addon.discord.feature-disabled-for-user:
+  category: addon-discord
+  description: Confirmation or status message shown for feature disabled for user.
+  audience:
+    - player
+  placeholders:
+    '0': You have disabled
+addon.discord.feature-enabled-for-user:
+  category: addon-discord
+  description: Confirmation or status message shown for feature enabled for user.
+  audience:
+    - player
+  placeholders:
+    '0': You have enabled
+addon.discord.feature-status-changed:
+  category: addon-discord
+  description: Confirmation or status message shown for feature status changed.
+  audience:
+    - player
+  placeholders:
+    '0': Successfully set the notifaction
+    '1': Ops
+addon.discord.field.account:
+  category: addon-discord
+  description: Discord addon message or label for account.
+  audience:
+    - player
+addon.discord.field.amount:
+  category: addon-discord
+  description: Discord addon message or label for amount.
+  audience:
+    - player
+addon.discord.field.balance:
+  category: addon-discord
+  description: Discord addon message or label for balance.
+  audience:
+    - player
+addon.discord.field.balance-after-tax:
+  category: addon-discord
+  description: Discord addon message or label for balance after tax.
+  audience:
+    - player
+addon.discord.field.cost:
+  category: addon-discord
+  description: Discord addon message or label for cost.
+  audience:
+    - player
+addon.discord.field.item:
+  category: addon-discord
+  description: Discord addon message or label for item.
+  audience:
+    - player
+addon.discord.field.player:
+  category: addon-discord
+  description: Discord addon message or label for player.
+  audience:
+    - player
+addon.discord.field.taxes:
+  category: addon-discord
+  description: Discord addon message or label for taxes.
+  audience:
+    - player
+addon.discord.link-help:
+  category: addon-discord
+  description: Discord addon message or label for link help.
+  audience:
+    - player
+  placeholders:
+    '0': This server using
+addon.discord.save-notifaction-exception:
+  category: addon-discord
+  description: Discord addon message or label for save notifaction exception.
+  audience:
+    - player
+addon.discount.code-type.PLAYER_ALL_SHOPS:
+  category: addon-discount
+  description: Discount addon message or label for PLAYER ALL SHOPS.
+  audience:
+    - player
+addon.discount.code-type.SERVER_ALL_SHOPS:
+  category: addon-discount
+  description: Discount addon message or label for SERVER ALL SHOPS.
+  audience:
+    - player
+addon.discount.code-type.SPECIFIC_SHOPS:
+  category: addon-discount
+  description: Discount addon message or label for SPECIFIC SHOPS.
+  audience:
+    - player
+addon.discount.commands.discount.description:
+  category: addon-discount
+  description: Description displayed for the discount command.
+  audience:
+    - player
+addon.discount.discount-code-added:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code added.
+  audience:
+    - player
+  placeholders:
+    '0': Your discount code
+    '1': Been added into shop
+addon.discount.discount-code-already-exists:
+  category: addon-discount
+  description: Discount addon message or label for discount code already exists.
+  audience:
+    - player
+addon.discount.discount-code-applicable:
+  category: addon-discount
+  description: Discount addon message or label for discount code applicable.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+addon.discount.discount-code-applicable-with-threshold:
+  category: addon-discount
+  description: Discount addon message or label for discount code applicable with threshold.
+  audience:
+    - player
+  placeholders:
+    '0': Your discount code
+    '1': Your purchase cost over
+addon.discount.discount-code-applied-in-purchase:
+  category: addon-discount
+  description: Discount addon message or label for discount code applied in purchase.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+    '1': Purchase and you saved
+addon.discount.discount-code-config-applied:
+  category: addon-discount
+  description: Discount addon message or label for discount code config applied.
+  audience:
+    - player
+addon.discount.discount-code-config-expire:
+  category: addon-discount
+  description: Discount addon message or label for discount code config expire.
+  audience:
+    - player
+addon.discount.discount-code-config-shop-add-failure:
+  category: addon-discount
+  description: Error message shown when discount code config shop add failure.
+  audience:
+    - player
+addon.discount.discount-code-config-shop-added:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code config shop added.
+  audience:
+    - player
+addon.discount.discount-code-config-shop-remove-failure:
+  category: addon-discount
+  description: Error message shown when discount code config shop remove failure.
+  audience:
+    - player
+addon.discount.discount-code-config-shop-removed:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code config shop removed.
+  audience:
+    - player
+addon.discount.discount-code-created-successfully:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code created successfully.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+    '1': Scope
+    '2': Code
+    '3': Addshop
+addon.discount.discount-code-details:
+  category: addon-discount
+  description: Discount addon message or label for discount code details.
+  audience:
+    - player
+  placeholders:
+    '0': Discount code
+    '1': Creator
+    '2': Applicable scope
+    '3': Remaining usage count
+    '4': Expiration time
+    '5': Threshold value
+    '6': Formatted discount rate
+addon.discount.discount-code-expired:
+  category: addon-discount
+  description: Discount addon message or label for discount code expired.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+addon.discount.discount-code-has-been-expired:
+  category: addon-discount
+  description: Discount addon message or label for discount code has been expired.
+  audience:
+    - player
+addon.discount.discount-code-installed:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code installed.
+  audience:
+    - player
+  placeholders:
+    '0': Discount code
+addon.discount.discount-code-list:
+  category: addon-discount
+  description: Discount addon message or label for discount code list.
+  audience:
+    - player
+addon.discount.discount-code-no-permission:
+  category: addon-discount
+  description: Discount addon message or label for discount code no permission.
+  audience:
+    - player
+addon.discount.discount-code-not-applicable:
+  category: addon-discount
+  description: Discount addon message or label for discount code not applicable.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+addon.discount.discount-code-query:
+  category: addon-discount
+  description: Discount addon message or label for discount code query.
+  audience:
+    - player
+  placeholders:
+    '0': Are using discount code
+addon.discount.discount-code-query-nothing:
+  category: addon-discount
+  description: Discount addon message or label for discount code query nothing.
+  audience:
+    - player
+addon.discount.discount-code-reach-the-limit:
+  category: addon-discount
+  description: Discount addon message or label for discount code reach the limit.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+addon.discount.discount-code-removed:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code removed.
+  audience:
+    - player
+  placeholders:
+    '0': Discount code
+    '1': Been removed from shop
+addon.discount.discount-code-under-threshold:
+  category: addon-discount
+  description: Discount addon message or label for discount code under threshold.
+  audience:
+    - player
+  placeholders:
+    '0': Threshold value
+addon.discount.discount-code-uninstalled:
+  category: addon-discount
+  description: Confirmation or status message shown for discount code uninstalled.
+  audience:
+    - player
+addon.discount.fixed-off:
+  category: addon-discount
+  description: Discount addon message or label for fixed off.
+  audience:
+    - player
+  placeholders:
+    '0': Rate
+addon.discount.invalid-code-type:
+  category: addon-discount
+  description: Error message shown when invalid code type.
+  audience:
+    - player
+  placeholders:
+    '0': Code type str
+addon.discount.invalid-discount-code:
+  category: addon-discount
+  description: Error message shown when invalid discount code.
+  audience:
+    - player
+addon.discount.invalid-discount-code-regex:
+  category: addon-discount
+  description: Error message shown when invalid discount code regex.
+  audience:
+    - player
+  placeholders:
+    '0': N a m e  r e g  e x p
+addon.discount.invalid-discount-rate:
+  category: addon-discount
+  description: Error message shown when invalid discount rate.
+  audience:
+    - player
+  placeholders:
+    '0': The discount rate
+addon.discount.invalid-effect-scope:
+  category: addon-discount
+  description: Error message shown when invalid effect scope.
+  audience:
+    - player
+  placeholders:
+    '0': The scope
+addon.discount.invalid-expire-time:
+  category: addon-discount
+  description: Error message shown when invalid expire time.
+  audience:
+    - player
+addon.discount.invalid-threshold-restriction:
+  category: addon-discount
+  description: Error message shown when invalid threshold restriction.
+  audience:
+    - player
+  placeholders:
+    '0': The threshold restriction
+addon.discount.invalid-usage-restriction:
+  category: addon-discount
+  description: Error message shown when invalid usage restriction.
+  audience:
+    - player
+  placeholders:
+    '0': The usage restriction
+addon.discount.percentage-off:
+  category: addon-discount
+  description: Discount addon message or label for percentage off.
+  audience:
+    - player
+  placeholders:
+    '0': Percent
+addon.discount.scope.server:
+  category: addon-discount
+  description: Discount addon message or label for server.
+  audience:
+    - player
+addon.discount.scope.this-shop:
+  category: addon-discount
+  description: Discount addon message or label for this shop.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+addon.discount.scope.your-shops-managed:
+  category: addon-discount
+  description: Discount addon message or label for your shops managed.
+  audience:
+    - shop-owner
+addon.discount.scope.your-shops-owned:
+  category: addon-discount
+  description: Discount addon message or label for your shops owned.
+  audience:
+    - shop-owner
+addon.discount.tab-complete.discount.create.expired:
+  category: addon-discount
+  description: Tab-completion hint for expired.
+  audience:
+    - player
+addon.discount.tab-complete.discount.create.max-usage:
+  category: addon-discount
+  description: Tab-completion hint for max usage.
+  audience:
+    - player
+addon.discount.tab-complete.discount.create.rate:
+  category: addon-discount
+  description: Tab-completion hint for rate.
+  audience:
+    - player
+addon.discount.tab-complete.discount.create.threshold:
+  category: addon-discount
+  description: Tab-completion hint for threshold.
+  audience:
+    - player
+addon.discount.tab-complete.discount.general.code:
+  category: addon-discount
+  description: Tab-completion hint for code.
+  audience:
+    - player
+addon.displaycontrol.command.displaycontrol:
+  category: addon-displaycontrol
+  description: Displaycontrol addon message or label for displaycontrol.
+  audience:
+    - player
+addon.displaycontrol.toggle:
+  category: addon-displaycontrol
+  description: Displaycontrol addon message or label for displaycontrol toggle.
+  audience:
+    - player
+  placeholders:
+    '0': QuickShop display showcasing to
+addon.displaycontrol.toggle-exception:
+  category: addon-displaycontrol
+  description: Displaycontrol addon message or label for toggle exception.
+  audience:
+    - player
+addon.dominion.creation-denied:
+  category: addon-dominion
+  description: Error message shown when creation denied.
+  audience:
+    - player
+addon.dominion.trade-denied:
+  category: addon-dominion
+  description: Error message shown when trade denied.
+  audience:
+    - player
+addon.dynmap.marker-description:
+  category: addon-dynmap
+  description: Dynmap addon message or label for marker description.
+  audience:
+    - player
+  placeholders:
+    '0': Shop name
+    '1': Item amount
+    '2': Localized item name
+    '3': Price
+    '4': Item amount
+    '5': Type
+    '6': Unlimited
+    '7': Pos str
+addon.dynmap.marker-name:
+  category: addon-dynmap
+  description: Dynmap addon message or label for marker name.
+  audience:
+    - player
+  placeholders:
+    '0': Shop name
+    '2': Localized item name
+    '3': 0 2
+    '4': 2 3 for x
+    '5': Type
+addon.dynmap.markerset-title:
+  category: addon-dynmap
+  description: Dynmap addon message or label for markerset title.
+  audience:
+    - player
+addon.fabledskyblock.owner-create-only:
+  category: addon-fabledskyblock
+  description: Fabledskyblock addon message or label for owner create only.
+  audience:
+    - shop-owner
+addon.fabledskyblock.owner-member-create-only:
+  category: addon-fabledskyblock
+  description: Fabledskyblock addon message or label for owner member create only.
+  audience:
+    - shop-owner
+addon.griefprevention.creation-denied:
+  category: addon-griefprevention
+  description: Error message shown when creation denied.
+  audience:
+    - player
+addon.griefprevention.trade-denied:
+  category: addon-griefprevention
+  description: Error message shown when trade denied.
+  audience:
+    - player
+addon.lands.creation-denied:
+  category: addon-lands
+  description: Error message shown when creation denied.
+  audience:
+    - player
+addon.lands.world-not-enabled:
+  category: addon-lands
+  description: Confirmation or status message shown for world not enabled.
+  audience:
+    - player
+addon.limited.commands.limit:
+  category: addon-limited
+  description: Limited addon message or label for limit.
+  audience:
+    - player
+addon.limited.reach-the-limit:
+  category: addon-limited
+  description: Limited addon message or label for reach the limit.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Item amount
+addon.limited.remains-limits:
+  category: addon-limited
+  description: Limited addon message or label for remains limits.
+  audience:
+    - player
+  placeholders:
+    '0': Player used limit
+addon.limited.remains-limits-before-reset-period-note:
+  category: addon-limited
+  description: Limited addon message or label for remains limits before reset period note.
+  audience:
+    - player
+  placeholders:
+    '0': Their purchase quota every
+addon.limited.success-remove:
+  category: addon-limited
+  description: Confirmation or status message shown for success remove.
+  audience:
+    - player
+addon.limited.success-reset:
+  category: addon-limited
+  description: Confirmation or status message shown for success reset.
+  audience:
+    - player
+addon.limited.success-setup:
+  category: addon-limited
+  description: Confirmation or status message shown for success setup.
+  audience:
+    - player
+addon.limited.titles.subtitle:
+  category: addon-limited
+  description: Limited addon message or label for subtitle.
+  audience:
+    - player
+  placeholders:
+    '0': Player used limit
+addon.limited.titles.title:
+  category: addon-limited
+  description: Limited addon message or label for titles title.
+  audience:
+    - player
+addon.limited.trade-limit-reached-cancel-reason:
+  category: addon-limited
+  description: Limited addon message or label for trade limit reached cancel reason.
+  audience:
+    - player
+addon.list.commands.list:
+  category: addon-list
+  description: List addon message or label for list.
+  audience:
+    - player
+addon.list.entry:
+  category: addon-list
+  description: List addon message or label for entry.
+  audience:
+    - player
+  placeholders:
+    '0': Counter
+    '1': Shop
+    '2': '1'
+    '3': Block X
+    '4': Block Y
+    '5': Block Z
+    '6': 3 4 5 Price
+    '7': Price 6 - x
+    '8': Localized item name
+    '9': Player
+    '10': Player
+addon.list.table-prefix:
+  category: addon-list
+  description: List addon message or label for table prefix.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': 0 s shops (Total
+addon.list.table-prefix-pageable:
+  category: addon-list
+  description: List addon message or label for table prefix pageable.
+  audience:
+    - player
+  placeholders:
+    '0': Name
+    '1': Page
+    '2': Page size
+addon.plotsquared.creation-denied:
+  category: addon-plotsquared
+  description: Error message shown when creation denied.
+  audience:
+    - player
+addon.plotsquared.flag.create:
+  category: addon-plotsquared
+  description: Plotsquared addon message or label for create.
+  audience:
+    - player
+addon.plotsquared.flag.trade:
+  category: addon-plotsquared
+  description: Plotsquared addon message or label for trade.
+  audience:
+    - player
+addon.plotsquared.no-plot-whitelist-creation:
+  category: addon-plotsquared
+  description: Plotsquared addon message or label for no plot whitelist creation.
+  audience:
+    - player
+addon.plotsquared.no-plot-whitelist-trade:
+  category: addon-plotsquared
+  description: Plotsquared addon message or label for no plot whitelist trade.
+  audience:
+    - player
+addon.plotsquared.trade-denied:
+  category: addon-plotsquared
+  description: Error message shown when trade denied.
+  audience:
+    - player
+addon.quests.buy-quest-required:
+  category: addon-quests
+  description: Quests addon message or label for buy quest required.
+  audience:
+    - player
+  placeholders:
+    '0': Quest buy shop
+addon.quests.create-quest-required:
+  category: addon-quests
+  description: Quests addon message or label for create quest required.
+  audience:
+    - player
+  placeholders:
+    '0': Quest create shop
+addon.quests.sell-quest-required:
+  category: addon-quests
+  description: Quests addon message or label for sell quest required.
+  audience:
+    - player
+  placeholders:
+    '0': Quest sell shop
+addon.reremake-migrator.commands.migratefromreremake:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for migratefromreremake.
+  audience:
+    - player
+addon.reremake-migrator.completed:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for completed.
+  audience:
+    - player
+addon.reremake-migrator.executing:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for executing.
+  audience:
+    - player
+  placeholders:
+    '0': Simple Name
+    '1': Left
+    '2': Middle
+addon.reremake-migrator.failed:
+  category: addon-reremake-migrator
+  description: Error message shown when failed.
+  audience:
+    - player
+addon.reremake-migrator.join_blocking_converting:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for join blocking converting.
+  audience:
+    - player
+addon.reremake-migrator.join_blocking_finished:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for join blocking finished.
+  audience:
+    - player
+addon.reremake-migrator.modules.config.copy-values:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for copy values.
+  audience:
+    - player
+  placeholders:
+    '0': Copying values (total
+addon.reremake-migrator.modules.config.copying-value:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for copying value.
+  audience:
+    - player
+  placeholders:
+    '0': Copying
+    '1': Copying 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.config.migrate-price-restriction:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for migrate price restriction.
+  audience:
+    - player
+addon.reremake-migrator.modules.config.migrate-price-restriction-entry:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for migrate price restriction entry.
+  audience:
+    - player
+  placeholders:
+    '0': Migrating
+    '1': Migrating 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.shop-logs.extract-history-files:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for extract history files.
+  audience:
+    - player
+addon.reremake-migrator.modules.shop-logs.filter-history-files:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for filter history files.
+  audience:
+    - player
+addon.reremake-migrator.modules.shop-logs.filtered-history-files:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for filtered history files.
+  audience:
+    - player
+  placeholders:
+    '0': Filtered
+addon.reremake-migrator.modules.shop-logs.import-entry:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for import entry.
+  audience:
+    - player
+  placeholders:
+    '0': Migrating
+    '1': Migrating 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.shop-logs.start-migrate:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for start migrate.
+  audience:
+    - player
+addon.reremake-migrator.modules.shop.conflict:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for conflict.
+  audience:
+    - player
+  placeholders:
+    '0': Taking a predefined behavior
+addon.reremake-migrator.modules.shop.migrate-entry:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for migrate entry.
+  audience:
+    - player
+  placeholders:
+    '0': Migrating
+    '1': Migrating 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.shop.register-entry:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for register entry.
+  audience:
+    - player
+  placeholders:
+    '0': Registering
+    '1': Registering 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.shop.save-entry:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for save entry.
+  audience:
+    - player
+  placeholders:
+    '0': Saving
+    '1': Saving 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.shop.saving-shops:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for saving shops.
+  audience:
+    - player
+  placeholders:
+    '0': Saving
+addon.reremake-migrator.modules.shop.start-migrate:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for start migrate.
+  audience:
+    - player
+  placeholders:
+    '0': Migrating shops (total
+addon.reremake-migrator.modules.shop.unloading-reremake:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for unloading reremake.
+  audience:
+    - player
+addon.reremake-migrator.modules.translation.copy-values:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for copy values.
+  audience:
+    - player
+  placeholders:
+    '0': Copying values in locale
+    '1': In locale 0 (total
+addon.reremake-migrator.modules.translation.copying-value:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for copying value.
+  audience:
+    - player
+  placeholders:
+    '0': Copying
+    '1': Copying 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.translation.migrate-entry:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for migrate entry.
+  audience:
+    - player
+  placeholders:
+    '0': Migrating
+    '1': Migrating 0 (
+    '2': 0 ( 1 /
+addon.reremake-migrator.modules.translation.start-migrate:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for start migrate.
+  audience:
+    - player
+addon.reremake-migrator.server-not-empty:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for server not empty.
+  audience:
+    - player
+addon.reremake-migrator.starting-convert-progress:
+  category: addon-reremake-migrator
+  description: Reremake-migrator addon message or label for starting convert progress.
+  audience:
+    - player
+addon.residence.creation-flag-denied:
+  category: addon-residence
+  description: Error message shown when creation flag denied.
+  audience:
+    - player
+addon.residence.trade-flag-denied:
+  category: addon-residence
+  description: Error message shown when trade flag denied.
+  audience:
+    - player
+addon.residence.you-cannot-create-shop-in-wildness:
+  category: addon-residence
+  description: Error message shown when you cannot create shop in wildness.
+  audience:
+    - player
+addon.shopitemonly.message:
+  category: addon-shopitemonly
+  description: Shopitemonly addon message or label for message.
+  audience:
+    - player
+addon.superiorskyblock.owner-create-only:
+  category: addon-superiorskyblock
+  description: Superiorskyblock addon message or label for owner create only.
+  audience:
+    - shop-owner
+addon.superiorskyblock.owner-member-create-only:
+  category: addon-superiorskyblock
+  description: Superiorskyblock addon message or label for owner member create only.
+  audience:
+    - shop-owner
+addon.towny.commands.nation:
+  category: addon-towny
+  description: Towny addon message or label for nation.
+  audience:
+    - player
+addon.towny.commands.town:
+  category: addon-towny
+  description: Towny addon message or label for town.
+  audience:
+    - player
+addon.towny.flags.modify:
+  category: addon-towny
+  description: Towny addon message or label for modify.
+  audience:
+    - player
+addon.towny.flags.own:
+  category: addon-towny
+  description: Towny addon message or label for own.
+  audience:
+    - player
+addon.towny.flags.shop-type:
+  category: addon-towny
+  description: Towny addon message or label for shop type.
+  audience:
+    - player
+addon.towny.item-not-allowed:
+  category: addon-towny
+  description: Error message shown when item not allowed.
+  audience:
+    - player
+addon.towny.make-shop-no-longer-owned-by-nation:
+  category: addon-towny
+  description: Towny addon message or label for make shop no longer owned by nation.
+  audience:
+    - player
+addon.towny.make-shop-no-longer-owned-by-town:
+  category: addon-towny
+  description: Towny addon message or label for make shop no longer owned by town.
+  audience:
+    - player
+addon.towny.make-shop-owned-by-nation:
+  category: addon-towny
+  description: Towny addon message or label for make shop owned by nation.
+  audience:
+    - player
+  placeholders:
+    '0': Shop owned by nation
+addon.towny.make-shop-owned-by-town:
+  category: addon-towny
+  description: Towny addon message or label for make shop owned by town.
+  audience:
+    - player
+  placeholders:
+    '0': Shop owned by town
+addon.towny.operation-disabled-due-shop-status:
+  category: addon-towny
+  description: Confirmation or status message shown for operation disabled due shop status.
+  audience:
+    - player
+addon.towny.plot-type-disallowed:
+  category: addon-towny
+  description: Towny addon message or label for plot type disallowed.
+  audience:
+    - player
+addon.towny.shop-owning-changing-notice:
+  category: addon-towny
+  description: Towny addon message or label for shop owning changing notice.
+  audience:
+    - player
+addon.towny.target-shop-already-is-nation-shop:
+  category: addon-towny
+  description: Towny addon message or label for target shop already is nation shop.
+  audience:
+    - player
+addon.towny.target-shop-already-is-town-shop:
+  category: addon-towny
+  description: Towny addon message or label for target shop already is town shop.
+  audience:
+    - player
+addon.towny.target-shop-not-in-nation-region:
+  category: addon-towny
+  description: Towny addon message or label for target shop not in nation region.
+  audience:
+    - player
+addon.towny.target-shop-not-in-town-region:
+  category: addon-towny
+  description: Towny addon message or label for target shop not in town region.
+  audience:
+    - player
+addon.worldguard.creation-flag-test-failed:
+  category: addon-worldguard
+  description: Error message shown when creation flag test failed.
+  audience:
+    - player
+addon.worldguard.reached-per-region-amount-limit:
+  category: addon-worldguard
+  description: Worldguard addon message or label for reached per region amount limit.
+  audience:
+    - player
+addon.worldguard.trade-flag-test-failed:
+  category: addon-worldguard
+  description: Error message shown when trade flag test failed.
+  audience:
+    - player
+admin-shop:
+  category: shops
+  description: Shop-related message or label for admin shop.
+  audience:
+    - server-administrator
+always-counting-removal-early-warning:
+  category: general
+  description: Warning message shown for always counting removal early warning.
+  audience:
+    - player
+april-rick-and-roll-easter-egg:
+  category: general
+  description: QuickShop localization text for april rick and roll easter egg.
+  audience:
+    - player
+argument-cannot-be:
+  category: general
+  description: Error message shown when argument cannot be.
+  audience:
+    - player
+  placeholders:
+    '0': The argument
+    '1': Argument 0 cannot be
+argument-must-between:
+  category: general
+  description: QuickShop localization text for argument must between.
+  audience:
+    - player
+  placeholders:
+    '0': Percentage
+    '1': 0 value must between
+    '2': Must between 1 and
+average-price-nearby:
+  category: transactions
+  description: Transaction message shown for average price nearby.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Nearby average prices
+backup-failed:
+  category: general
+  description: Error message shown when backup failed.
+  audience:
+    - player
+backup-success:
+  category: general
+  description: Confirmation or status message shown for backup success.
+  audience:
+    - player
+bad-command-usage:
+  category: general
+  description: QuickShop localization text for bad command usage.
+  audience:
+    - player
+bad-command-usage-detailed:
+  category: general
+  description: QuickShop localization text for bad command usage detailed.
+  audience:
+    - player
+  placeholders:
+    '0': Group
+batch-operations-based-on-tags-have-failure:
+  category: general
+  description: Error message shown when batch operations based on tags have failure.
+  audience:
+    - player
+  placeholders:
+    '0': Total
+    '1': Processing successfully completed but
+batch-operations-based-on-tags-have-failure-error-messages-may-appears-above:
+  category: general
+  description: Error message shown when batch operations based on tags have failure error messages may appears above.
+  audience:
+    - player
+batch-operations-based-on-tags-have-failure-with-reason:
+  category: general
+  description: Error message shown when batch operations based on tags have failure with reason.
+  audience:
+    - player
+  placeholders:
+    '0': Total
+    '1': Processing successfully completed but
+    '2': Requests not completed Reason
+batch-operations-based-on-tags-no-failure:
+  category: general
+  description: Error message shown when batch operations based on tags no failure.
+  audience:
+    - player
+  placeholders:
+    '0': Successfully batch processed
+benefit-added:
+  category: general
+  description: Confirmation or status message shown for benefit added.
+  audience:
+    - player
+  placeholders:
+    '0': Display
+benefit-exists:
+  category: general
+  description: QuickShop localization text for benefit exists.
+  audience:
+    - player
+benefit-overflow:
+  category: general
+  description: QuickShop localization text for benefit overflow.
+  audience:
+    - player
+benefit-query:
+  category: general
+  description: QuickShop localization text for benefit query.
+  audience:
+    - player
+  placeholders:
+    '0': This shop have
+benefit-query-list:
+  category: general
+  description: QuickShop localization text for benefit query list.
+  audience:
+    - player
+  placeholders:
+    '0': Display
+    '1': V
+benefit-removed:
+  category: general
+  description: Confirmation or status message shown for benefit removed.
+  audience:
+    - player
+benefit-updated:
+  category: general
+  description: QuickShop localization text for benefit updated.
+  audience:
+    - player
+  placeholders:
+    '0': Player
+blacklisted-item:
+  category: general
+  description: QuickShop localization text for blacklisted item.
+  audience:
+    - player
+booleanformat.failed:
+  category: formatting
+  description: Error message shown when failed.
+  audience:
+    - player
+booleanformat.success:
+  category: formatting
+  description: Confirmation or status message shown for success.
+  audience:
+    - player
+break-shop-use-supertool:
+  category: shops
+  description: Shop-related message or label for break shop use supertool.
+  audience:
+    - player
+    - shop-owner
+browse-command-leave-blank:
+  category: general
+  description: QuickShop localization text for browse command leave blank.
+  audience:
+    - player
+bungee-cross-server-msg:
+  category: general
+  description: QuickShop localization text for bungee cross server msg.
+  audience:
+    - player
+  placeholders:
+    '0': 'True'
+buying-more-than-selling:
+  category: general
+  description: QuickShop localization text for buying more than selling.
+  audience:
+    - player
+bypassing-lock:
+  category: general
+  description: QuickShop localization text for bypassing lock.
+  audience:
+    - player
+cannot-suggest-price:
+  category: transactions
+  description: Error message shown when cannot suggest price.
+  audience:
+    - player
+    - shop-owner
+chest-title:
+  category: general
+  description: QuickShop localization text for chest title.
+  audience:
+    - player
+chest-was-removed:
+  category: general
+  description: Confirmation or status message shown for chest was removed.
+  audience:
+    - player
+cleanghost-deleted:
+  category: general
+  description: QuickShop localization text for cleanghost deleted.
+  audience:
+    - player
+  placeholders:
+    '0': Get
+cleanghost-deleting:
+  category: general
+  description: QuickShop localization text for cleanghost deleting.
+  audience:
+    - player
+  placeholders:
+    '0': Found a corrupted shop
+    '1': Data
+cleanghost-starting:
+  category: general
+  description: QuickShop localization text for cleanghost starting.
+  audience:
+    - player
+cleanghost-warning:
+  category: general
+  description: Warning message shown for cleanghost warning.
+  audience:
+    - player
+client-language-changed:
+  category: general
+  description: Confirmation or status message shown for client language changed.
+  audience:
+    - player
+  placeholders:
+    '0': We now use the
+client-language-unsupported:
+  category: general
+  description: QuickShop localization text for client language unsupported.
+  audience:
+    - player
+  placeholders:
+    '0': Falling back to locale
+command-incorrect:
+  category: general
+  description: QuickShop localization text for command incorrect.
+  audience:
+    - player
+  placeholders:
+    '0': Listall
+command-type-mismatch:
+  category: general
+  description: QuickShop localization text for command type mismatch.
+  audience:
+    - player
+  placeholders:
+    '0': Player
+command.bulk-size-not-set:
+  category: commands
+  description: QuickShop localization text for bulk size not set.
+  audience:
+    - player
+command.bulk-size-now:
+  category: commands
+  description: QuickShop localization text for bulk size now.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Localized item name
+command.cleaned:
+  category: commands
+  description: QuickShop localization text for cleaned.
+  audience:
+    - player
+  placeholders:
+    '0': I
+command.cleaning:
+  category: commands
+  description: QuickShop localization text for cleaning.
+  audience:
+    - player
+command.description.about:
+  category: commands
+  description: Description displayed for the about QuickShop command.
+  audience:
+    - player
+command.description.alwayscounting:
+  category: commands
+  description: Description displayed for the alwayscounting QuickShop command.
+  audience:
+    - player
+command.description.amount:
+  category: commands
+  description: Description displayed for the amount QuickShop command.
+  audience:
+    - player
+command.description.ban:
+  category: commands
+  description: Description displayed for the ban QuickShop command.
+  audience:
+    - player
+command.description.benefit:
+  category: commands
+  description: Description displayed for the benefit QuickShop command.
+  audience:
+    - player
+command.description.benefitall:
+  category: commands
+  description: Description displayed for the benefitall QuickShop command.
+  audience:
+    - player
+command.description.browse:
+  category: commands
+  description: Description displayed for the browse QuickShop command.
+  audience:
+    - player
+command.description.buy:
+  category: commands
+  description: Description displayed for the buy QuickShop command.
+  audience:
+    - player
+command.description.clean:
+  category: commands
+  description: Description displayed for the clean QuickShop command.
+  audience:
+    - player
+command.description.create:
+  category: commands
+  description: Description displayed for the create QuickShop command.
+  audience:
+    - player
+command.description.currency:
+  category: commands
+  description: Description displayed for the currency QuickShop command.
+  audience:
+    - player
+command.description.database:
+  category: commands
+  description: Description displayed for the database QuickShop command.
+  audience:
+    - player
+command.description.debug:
+  category: commands
+  description: Description displayed for the debug QuickShop command.
+  audience:
+    - player
+command.description.empty:
+  category: commands
+  description: Description displayed for the empty QuickShop command.
+  audience:
+    - player
+command.description.fetchmessage:
+  category: commands
+  description: Description displayed for the fetchmessage QuickShop command.
+  audience:
+    - player
+command.description.find:
+  category: commands
+  description: Description displayed for the find QuickShop command.
+  audience:
+    - player
+command.description.freeze:
+  category: commands
+  description: Description displayed for the freeze QuickShop command.
+  audience:
+    - player
+command.description.help:
+  category: commands
+  description: Description displayed for the help QuickShop command.
+  audience:
+    - player
+command.description.history:
+  category: commands
+  description: Description displayed for the history QuickShop command.
+  audience:
+    - player
+command.description.info:
+  category: commands
+  description: Description displayed for the info QuickShop command.
+  audience:
+    - player
+command.description.item:
+  category: commands
+  description: Description displayed for the item QuickShop command.
+  audience:
+    - player
+command.description.language:
+  category: commands
+  description: Description displayed for the language QuickShop command.
+  audience:
+    - player
+command.description.lock:
+  category: commands
+  description: Description displayed for the lock QuickShop command.
+  audience:
+    - player
+command.description.lookup:
+  category: commands
+  description: Description displayed for the lookup QuickShop command.
+  audience:
+    - player
+command.description.name:
+  category: commands
+  description: Description displayed for the name QuickShop command.
+  audience:
+    - player
+command.description.owner:
+  category: commands
+  description: Description displayed for the owner QuickShop command.
+  audience:
+    - shop-owner
+command.description.paste:
+  category: commands
+  description: Description displayed for the paste QuickShop command.
+  audience:
+    - player
+command.description.permission:
+  category: commands
+  description: Description displayed for the permission QuickShop command.
+  audience:
+    - player
+command.description.price:
+  category: commands
+  description: Description displayed for the price QuickShop command.
+  audience:
+    - player
+command.description.purge:
+  category: commands
+  description: Description displayed for the purge QuickShop command.
+  audience:
+    - player
+command.description.refill:
+  category: commands
+  description: Description displayed for the refill QuickShop command.
+  audience:
+    - player
+command.description.reload:
+  category: commands
+  description: Description displayed for the reload QuickShop command.
+  audience:
+    - player
+command.description.remove:
+  category: commands
+  description: Description displayed for the remove QuickShop command.
+  audience:
+    - player
+command.description.removeall:
+  category: commands
+  description: Description displayed for the removeall QuickShop command.
+  audience:
+    - player
+command.description.removeworld:
+  category: commands
+  description: Description displayed for the removeworld QuickShop command.
+  audience:
+    - player
+command.description.sell:
+  category: commands
+  description: Description displayed for the sell QuickShop command.
+  audience:
+    - player
+command.description.setowner:
+  category: commands
+  description: Description displayed for the setowner QuickShop command.
+  audience:
+    - shop-owner
+command.description.sign:
+  category: commands
+  description: Description displayed for the sign QuickShop command.
+  audience:
+    - player
+command.description.size:
+  category: commands
+  description: Description displayed for the size QuickShop command.
+  audience:
+    - player
+command.description.staff:
+  category: commands
+  description: Description displayed for the staff QuickShop command.
+  audience:
+    - shop-owner
+command.description.staffall:
+  category: commands
+  description: Description displayed for the staffall QuickShop command.
+  audience:
+    - shop-owner
+command.description.suggestprice:
+  category: commands
+  description: Description displayed for the suggestprice QuickShop command.
+  audience:
+    - player
+command.description.supercreate:
+  category: commands
+  description: Description displayed for the supercreate QuickShop command.
+  audience:
+    - player
+command.description.tag:
+  category: commands
+  description: Description displayed for the tag QuickShop command.
+  audience:
+    - player
+command.description.taxaccount:
+  category: commands
+  description: Description displayed for the taxaccount QuickShop command.
+  audience:
+    - player
+command.description.title:
+  category: commands
+  description: Description displayed for the title QuickShop command.
+  audience:
+    - player
+command.description.toggledisplay:
+  category: commands
+  description: Description displayed for the toggledisplay QuickShop command.
+  audience:
+    - player
+command.description.toggledisplayall:
+  category: commands
+  description: Description displayed for the toggledisplayall QuickShop command.
+  audience:
+    - player
+command.description.transfer:
+  category: commands
+  description: Description displayed for the transfer QuickShop command.
+  audience:
+    - player
+command.description.transferall:
+  category: commands
+  description: Description displayed for the transferall QuickShop command.
+  audience:
+    - player
+command.description.transferownership:
+  category: commands
+  description: Description displayed for the transferownership QuickShop command.
+  audience:
+    - shop-owner
+command.description.unban:
+  category: commands
+  description: Description displayed for the unban QuickShop command.
+  audience:
+    - player
+command.description.unlimited:
+  category: commands
+  description: Description displayed for the unlimited QuickShop command.
+  audience:
+    - player
+command.disabled:
+  category: commands
+  description: Confirmation or status message shown for disabled.
+  audience:
+    - player
+  placeholders:
+    '0': This command is disabled
+command.feature-not-enabled:
+  category: commands
+  description: Confirmation or status message shown for feature not enabled.
+  audience:
+    - player
+command.format:
+  category: commands
+  description: QuickShop localization text for command format.
+  audience:
+    - player
+  placeholders:
+    '0': Command label
+    '1': Prefix
+    '2': Command desc
+command.format-disabled:
+  category: commands
+  description: Confirmation or status message shown for format disabled.
+  audience:
+    - player
+  placeholders:
+    '0': Command label
+    '1': Prefix
+    '2': Disable Text
+command.invalid-bulk-amount:
+  category: commands
+  description: Error message shown when invalid bulk amount.
+  audience:
+    - player
+  placeholders:
+    '0': Amount
+command.new-owner:
+  category: commands
+  description: QuickShop localization text for new owner.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Display
+command.no-amount-given:
+  category: commands
+  description: QuickShop localization text for no amount given.
+  audience:
+    - player
+command.no-owner-given:
+  category: commands
+  description: QuickShop localization text for no owner given.
+  audience:
+    - shop-owner
+command.no-trade-item:
+  category: commands
+  description: QuickShop localization text for no trade item.
+  audience:
+    - player
+command.no-type-given:
+  category: commands
+  description: QuickShop localization text for no type given.
+  audience:
+    - player
+command.no-world-given:
+  category: commands
+  description: QuickShop localization text for no world given.
+  audience:
+    - player
+command.now-buying:
+  category: commands
+  description: QuickShop localization text for now buying.
+  audience:
+    - player
+  placeholders:
+    '0': Localized item name
+command.now-debuging:
+  category: commands
+  description: QuickShop localization text for now debuging.
+  audience:
+    - player
+command.now-nolonger-debuging:
+  category: commands
+  description: QuickShop localization text for now nolonger debuging.
+  audience:
+    - player
+command.now-selling:
+  category: commands
+  description: QuickShop localization text for now selling.
+  audience:
+    - player
+  placeholders:
+    '0': Localized item name
+command.reloading:
+  category: commands
+  description: QuickShop localization text for reloading.
+  audience:
+    - player
+command.some-shops-removed:
+  category: commands
+  description: Confirmation or status message shown for some shops removed.
+  audience:
+    - player
+  placeholders:
+    '0': Size
+command.toggle-always-counting.counting:
+  category: commands
+  description: QuickShop localization text for counting.
+  audience:
+    - player
+command.toggle-always-counting.not-counting:
+  category: commands
+  description: QuickShop localization text for not counting.
+  audience:
+    - player
+command.toggle-unlimited.limited:
+  category: commands
+  description: QuickShop localization text for limited.
+  audience:
+    - player
+command.toggle-unlimited.unlimited:
+  category: commands
+  description: QuickShop localization text for unlimited.
+  audience:
+    - player
+command.trade-item-now:
+  category: commands
+  description: QuickShop localization text for trade item now.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Localized item name
+command.transfer-success:
+  category: commands
+  description: Confirmation or status message shown for transfer success.
+  audience:
+    - player
+  placeholders:
+    '0': Transferred
+    '1': Transferred 0 shop(s) to
+command.transfer-success-other:
+  category: commands
+  description: Confirmation or status message shown for transfer success other.
+  audience:
+    - player
+  placeholders:
+    '0': Size
+    '1': First
+    '2': Args
+command.wrong-args:
+  category: commands
+  description: QuickShop localization text for wrong args.
+  audience:
+    - player
+compat.advancedchests.created:
+  category: compatibility
+  description: Confirmation or status message shown for created.
+  audience:
+    - server-administrator
+compat.advancedchests.permission-denied:
+  category: compatibility
+  description: Error message shown when permission denied.
+  audience:
+    - server-administrator
+compatibility.elitemobs.soulbound-disallowed:
+  category: compatibility
+  description: QuickShop localization text for soulbound disallowed.
+  audience:
+    - server-administrator
+complete:
+  category: general
+  description: QuickShop localization text for complete.
+  audience:
+    - player
+console-only:
+  category: general
+  description: QuickShop localization text for console only.
+  audience:
+    - player
+console-only-danger:
+  category: general
+  description: QuickShop localization text for console only danger.
+  audience:
+    - player
+controlpanel.alwayscounting:
+  category: control-panel
+  description: Shop control-panel text for alwayscounting.
+  audience:
+    - player
+  placeholders:
+    '0': Always counting
+controlpanel.alwayscounting-hover:
+  category: control-panel
+  description: Shop control-panel text for alwayscounting hover.
+  audience:
+    - player
+controlpanel.currency:
+  category: control-panel
+  description: Shop control-panel text for currency.
+  audience:
+    - player
+  placeholders:
+    '0': Currency
+controlpanel.currency-hover:
+  category: control-panel
+  description: Shop control-panel text for currency hover.
+  audience:
+    - player
+controlpanel.empty:
+  category: control-panel
+  description: Shop control-panel text for empty.
+  audience:
+    - player
+controlpanel.empty-hover:
+  category: control-panel
+  description: Shop control-panel text for empty hover.
+  audience:
+    - player
+controlpanel.freeze:
+  category: control-panel
+  description: Shop control-panel text for freeze.
+  audience:
+    - player
+  placeholders:
+    '0': Freeze mode
+controlpanel.freeze-hover:
+  category: control-panel
+  description: Shop control-panel text for freeze hover.
+  audience:
+    - player
+controlpanel.history:
+  category: control-panel
+  description: Shop control-panel text for history.
+  audience:
+    - player
+controlpanel.history-hover:
+  category: control-panel
+  description: Shop control-panel text for history hover.
+  audience:
+    - player
+controlpanel.infomation:
+  category: control-panel
+  description: Shop control-panel text for infomation.
+  audience:
+    - player
+controlpanel.inventory:
+  category: control-panel
+  description: Shop control-panel text for inventory.
+  audience:
+    - player
+controlpanel.inventory-hover:
+  category: control-panel
+  description: Shop control-panel text for inventory hover.
+  audience:
+    - player
+controlpanel.item:
+  category: control-panel
+  description: Shop control-panel text for item.
+  audience:
+    - player
+  placeholders:
+    '0': Shop Item
+controlpanel.item-hover:
+  category: control-panel
+  description: Shop control-panel text for item hover.
+  audience:
+    - player
+controlpanel.lock:
+  category: control-panel
+  description: Shop control-panel text for lock.
+  audience:
+    - player
+  placeholders:
+    '0': Shop lock
+controlpanel.lock-hover:
+  category: control-panel
+  description: Shop control-panel text for lock hover.
+  audience:
+    - player
+controlpanel.mode-buying:
+  category: control-panel
+  description: Shop control-panel text for mode buying.
+  audience:
+    - player
+controlpanel.mode-buying-hover:
+  category: control-panel
+  description: Shop control-panel text for mode buying hover.
+  audience:
+    - player
+controlpanel.mode-selling:
+  category: control-panel
+  description: Shop control-panel text for mode selling.
+  audience:
+    - player
+controlpanel.mode-selling-hover:
+  category: control-panel
+  description: Shop control-panel text for mode selling hover.
+  audience:
+    - player
+controlpanel.price:
+  category: control-panel
+  description: Shop control-panel text for price.
+  audience:
+    - player
+  placeholders:
+    '0': Price
+controlpanel.price-hover:
+  category: control-panel
+  description: Shop control-panel text for price hover.
+  audience:
+    - player
+controlpanel.refill:
+  category: control-panel
+  description: Shop control-panel text for refill.
+  audience:
+    - player
+controlpanel.refill-hover:
+  category: control-panel
+  description: Shop control-panel text for refill hover.
+  audience:
+    - player
+controlpanel.remove:
+  category: control-panel
+  description: Shop control-panel text for remove.
+  audience:
+    - player
+controlpanel.remove-hover:
+  category: control-panel
+  description: Shop control-panel text for remove hover.
+  audience:
+    - player
+controlpanel.setowner:
+  category: control-panel
+  description: Shop control-panel text for setowner.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Owner
+controlpanel.setowner-hover:
+  category: control-panel
+  description: Shop control-panel text for setowner hover.
+  audience:
+    - shop-owner
+controlpanel.stack:
+  category: control-panel
+  description: Shop control-panel text for stack.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+controlpanel.stack-hover:
+  category: control-panel
+  description: Shop control-panel text for stack hover.
+  audience:
+    - player
+controlpanel.toggledisplay:
+  category: control-panel
+  description: Shop control-panel text for toggledisplay.
+  audience:
+    - player
+  placeholders:
+    '0': Display-Item
+controlpanel.toggledisplay-hover:
+  category: control-panel
+  description: Shop control-panel text for toggledisplay hover.
+  audience:
+    - player
+controlpanel.unlimited:
+  category: control-panel
+  description: Shop control-panel text for unlimited.
+  audience:
+    - player
+  placeholders:
+    '0': Unlimited
+controlpanel.unlimited-hover:
+  category: control-panel
+  description: Shop control-panel text for unlimited hover.
+  audience:
+    - player
+currency-not-exists:
+  category: general
+  description: QuickShop localization text for currency not exists.
+  audience:
+    - player
+currency-not-support:
+  category: general
+  description: QuickShop localization text for currency not support.
+  audience:
+    - player
+currency-set:
+  category: general
+  description: QuickShop localization text for currency set.
+  audience:
+    - player
+  placeholders:
+    '0': Updated
+currency-unset:
+  category: general
+  description: QuickShop localization text for currency unset.
+  audience:
+    - player
+database.already-scanning:
+  category: database
+  description: Database status or diagnostic message for already scanning.
+  audience:
+    - server-administrator
+database.auto-scan-alert:
+  category: database
+  description: Database status or diagnostic message for auto scan alert.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Server requires maintenance Found
+database.auto-trim:
+  category: database
+  description: Database status or diagnostic message for auto trim.
+  audience:
+    - server-administrator
+database.auto-trim-started:
+  category: database
+  description: Database status or diagnostic message for auto trim started.
+  audience:
+    - server-administrator
+database.generated-at:
+  category: database
+  description: Database status or diagnostic message for generated at.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Generated at
+database.isolated:
+  category: database
+  description: Database status or diagnostic message for isolated.
+  audience:
+    - server-administrator
+database.isolated-data-ids:
+  category: database
+  description: Database status or diagnostic message for isolated data ids.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Isolated
+database.isolated-external-caches:
+  category: database
+  description: Database status or diagnostic message for isolated external caches.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': External Caches
+database.isolated-logs:
+  category: database
+  description: Database status or diagnostic message for isolated logs.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Logs
+database.isolated-shop-ids:
+  category: database
+  description: Database status or diagnostic message for isolated shop ids.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Isolated
+database.last-purge-time:
+  category: database
+  description: Database status or diagnostic message for last purge time.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Time of trim at
+database.purge-date:
+  category: database
+  description: Database status or diagnostic message for purge date.
+  audience:
+    - server-administrator
+database.purge-done-with-error:
+  category: database
+  description: Database status or diagnostic message for purge done with error.
+  audience:
+    - server-administrator
+database.purge-done-with-line:
+  category: database
+  description: Database status or diagnostic message for purge done with line.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': R
+database.purge-players-cache:
+  category: database
+  description: Database status or diagnostic message for purge players cache.
+  audience:
+    - server-administrator
+database.purge-players-completed:
+  category: database
+  description: Database status or diagnostic message for purge players completed.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Lines
+database.purge-players-error:
+  category: database
+  description: Database status or diagnostic message for purge players error.
+  audience:
+    - server-administrator
+database.purge-task-created:
+  category: database
+  description: Database status or diagnostic message for purge task created.
+  audience:
+    - server-administrator
+database.purge-warning:
+  category: database
+  description: Database status or diagnostic message for purge warning.
+  audience:
+    - server-administrator
+database.report-time:
+  category: database
+  description: Database status or diagnostic message for report time.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Time of scan at
+database.scanning:
+  category: database
+  description: Database status or diagnostic message for scanning.
+  audience:
+    - server-administrator
+database.scanning-async:
+  category: database
+  description: Database status or diagnostic message for scanning async.
+  audience:
+    - server-administrator
+database.status:
+  category: database
+  description: Database status or diagnostic message for status.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Status component
+database.status-bad:
+  category: database
+  description: Database status or diagnostic message for status bad.
+  audience:
+    - server-administrator
+database.status-good:
+  category: database
+  description: Database status or diagnostic message for status good.
+  audience:
+    - server-administrator
+database.suggestion.trim:
+  category: database
+  description: Database status or diagnostic message for trim.
+  audience:
+    - server-administrator
+database.trim-complete:
+  category: database
+  description: Database status or diagnostic message for trim complete.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': I
+database.trim-exception:
+  category: database
+  description: Database status or diagnostic message for trim exception.
+  audience:
+    - server-administrator
+database.trim-start:
+  category: database
+  description: Database status or diagnostic message for trim start.
+  audience:
+    - server-administrator
+database.trim-warning:
+  category: database
+  description: Database status or diagnostic message for trim warning.
+  audience:
+    - server-administrator
+debug.arguments-invalid:
+  category: debug
+  description: Debug or diagnostic message for arguments invalid.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': First
+debug.display-removed:
+  category: debug
+  description: Debug or diagnostic message for display removed.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Size
+debug.force-shop-loader-reload:
+  category: debug
+  description: Debug or diagnostic message for force shop loader reload.
+  audience:
+    - server-administrator
+debug.force-shop-loader-reload-complete:
+  category: debug
+  description: Debug or diagnostic message for force shop loader reload complete.
+  audience:
+    - server-administrator
+debug.force-shop-loader-reload-reloading-shop-loader:
+  category: debug
+  description: Debug or diagnostic message for force shop loader reload reloading shop loader.
+  audience:
+    - server-administrator
+debug.force-shop-loader-reload-unloading-shops:
+  category: debug
+  description: Debug or diagnostic message for force shop loader reload unloading shops.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Unloading
+debug.force-shop-loader-reload-unloading-shops-from-memory:
+  category: debug
+  description: Debug or diagnostic message for force shop loader reload unloading shops from memory.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Size
+debug.force-shop-reload:
+  category: debug
+  description: Debug or diagnostic message for force shop reload.
+  audience:
+    - server-administrator
+debug.force-shop-reload-complete:
+  category: debug
+  description: Debug or diagnostic message for force shop reload complete.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Size
+debug.handler-list-not-valid-bukkit-event-class:
+  category: debug
+  description: Debug or diagnostic message for handler list not valid bukkit event class.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': 'Null'
+debug.hikari-cp-not-working:
+  category: debug
+  description: Debug or diagnostic message for hikari cp not working.
+  audience:
+    - server-administrator
+debug.hikari-cp-size-tweak:
+  category: debug
+  description: Debug or diagnostic message for hikari cp size tweak.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Size
+debug.hikari-cp-testing:
+  category: debug
+  description: Debug or diagnostic message for hikari cp testing.
+  audience:
+    - server-administrator
+debug.hikari-cp-timeout:
+  category: debug
+  description: Debug or diagnostic message for hikari cp timeout.
+  audience:
+    - server-administrator
+debug.hikari-cp-working:
+  category: debug
+  description: Debug or diagnostic message for hikari cp working.
+  audience:
+    - server-administrator
+debug.invalid-base64-encoded-sql:
+  category: debug
+  description: Debug or diagnostic message for invalid base64 encoded sql.
+  audience:
+    - server-administrator
+debug.item-info-hand-as-string:
+  category: debug
+  description: Debug or diagnostic message for item info hand as string.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Hand
+    '1': To string
+debug.item-info-store-as-string:
+  category: debug
+  description: Debug or diagnostic message for item info store as string.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Store
+    '1': To string
+debug.item-matching-result:
+  category: debug
+  description: Debug or diagnostic message for item matching result.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Hand2 store
+    '1': Store2 hand
+debug.marked-as-dirty:
+  category: debug
+  description: Debug or diagnostic message for marked as dirty.
+  audience:
+    - server-administrator
+debug.operation-invalid:
+  category: debug
+  description: Debug or diagnostic message for operation invalid.
+  audience:
+    - server-administrator
+debug.operation-missing:
+  category: debug
+  description: Debug or diagnostic message for operation missing.
+  audience:
+    - server-administrator
+debug.property-changed:
+  category: debug
+  description: Debug or diagnostic message for property changed.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Key
+    '1': Old one
+    '2': Changed from 1 to
+debug.property-incorrect:
+  category: debug
+  description: Debug or diagnostic message for property incorrect.
+  audience:
+    - server-administrator
+debug.property-removed:
+  category: debug
+  description: Debug or diagnostic message for property removed.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Key
+debug.property-security-block:
+  category: debug
+  description: Debug or diagnostic message for property security block.
+  audience:
+    - server-administrator
+debug.queries-dumping:
+  category: debug
+  description: Debug or diagnostic message for queries dumping.
+  audience:
+    - server-administrator
+debug.queries-stopped:
+  category: debug
+  description: Debug or diagnostic message for queries stopped.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Stopped
+debug.restart-database-manager:
+  category: debug
+  description: Debug or diagnostic message for restart database manager.
+  audience:
+    - server-administrator
+debug.restart-database-manager-clear-executors:
+  category: debug
+  description: Debug or diagnostic message for restart database manager clear executors.
+  audience:
+    - server-administrator
+debug.restart-database-manager-done:
+  category: debug
+  description: Debug or diagnostic message for restart database manager done.
+  audience:
+    - server-administrator
+debug.restart-database-manager-reconnect:
+  category: debug
+  description: Debug or diagnostic message for restart database manager reconnect.
+  audience:
+    - server-administrator
+debug.restart-database-manager-unfinished-task:
+  category: debug
+  description: Debug or diagnostic message for restart database manager unfinished task.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': R
+debug.restart-database-manager-unfinished-task-history-query:
+  category: debug
+  description: Debug or diagnostic message for restart database manager unfinished task history query.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': R
+debug.shop-internal-data:
+  category: debug
+  description: Debug or diagnostic message for shop internal data.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Data of this shop
+debug.sign-located:
+  category: debug
+  description: Debug or diagnostic message for sign located.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Location
+debug.sql-completed:
+  category: debug
+  description: Debug or diagnostic message for sql completed.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Action complete
+debug.sql-confirm-not-found:
+  category: debug
+  description: Debug or diagnostic message for sql confirm not found.
+  audience:
+    - server-administrator
+debug.sql-disabled:
+  category: debug
+  description: Debug or diagnostic message for sql disabled.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': To your startup arguments
+debug.sql-exception:
+  category: debug
+  description: Debug or diagnostic message for sql exception.
+  audience:
+    - server-administrator
+debug.sql-executing:
+  category: debug
+  description: Debug or diagnostic message for sql executing.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Executing SQL statement
+debug.toggle-shop-loaded-status:
+  category: debug
+  description: Debug or diagnostic message for toggle shop loaded status.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Shop loaded status to
+debug.update-player-shops-complete:
+  category: debug
+  description: Debug or diagnostic message for update player shops complete.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Used time
+debug.update-player-shops-per-tick-threshold:
+  category: debug
+  description: Debug or diagnostic message for update player shops per tick threshold.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Be update per tick
+debug.update-player-shops-player-selected:
+  category: debug
+  description: Debug or diagnostic message for update player shops player selected.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Uuid
+debug.update-player-shops-player-shops:
+  category: debug
+  description: Debug or diagnostic message for update player shops player shops.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Size
+debug.update-player-shops-signs-create-async-task:
+  category: debug
+  description: Debug or diagnostic message for update player shops signs create async task.
+  audience:
+    - server-administrator
+debug.update-player-shops-signs-no-username-given:
+  category: debug
+  description: Debug or diagnostic message for update player shops signs no username given.
+  audience:
+    - server-administrator
+debug.update-player-shops-task-started:
+  category: debug
+  description: Debug or diagnostic message for update player shops task started.
+  audience:
+    - server-administrator
+debug.warning-sql:
+  category: debug
+  description: Debug or diagnostic message for warning sql.
+  audience:
+    - server-administrator
+debug.warning-sql-confirm:
+  category: debug
+  description: Debug or diagnostic message for warning sql confirm.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Debug database sql confirm
+debug.warning-sql-confirm-hover:
+  category: debug
+  description: Debug or diagnostic message for warning sql confirm hover.
+  audience:
+    - server-administrator
+delete-controlpanel-button-confirm:
+  category: general
+  description: QuickShop localization text for delete controlpanel button confirm.
+  audience:
+    - player
+  placeholders:
+    '0': C o n f i r m  t i m e o u t
+denied-put-in-item:
+  category: general
+  description: Error message shown when denied put in item.
+  audience:
+    - player
+digits-reach-the-limit:
+  category: general
+  description: QuickShop localization text for digits reach the limit.
+  audience:
+    - player
+disabled-in-this-world:
+  category: general
+  description: Confirmation or status message shown for disabled in this world.
+  audience:
+    - player
+display-fallback:
+  category: general
+  description: QuickShop localization text for display fallback.
+  audience:
+    - player
+display-turn-off:
+  category: general
+  description: QuickShop localization text for display turn off.
+  audience:
+    - player
+display-turn-off-all:
+  category: general
+  description: QuickShop localization text for display turn off all.
+  audience:
+    - player
+display-turn-off-owned:
+  category: general
+  description: QuickShop localization text for display turn off owned.
+  audience:
+    - player
+display-turn-on:
+  category: general
+  description: QuickShop localization text for display turn on.
+  audience:
+    - player
+display-turn-on-all:
+  category: general
+  description: QuickShop localization text for display turn on all.
+  audience:
+    - player
+display-turn-on-owned:
+  category: general
+  description: QuickShop localization text for display turn on owned.
+  audience:
+    - player
+economy-transaction-failed:
+  category: general
+  description: Error message shown when economy transaction failed.
+  audience:
+    - player
+edition-confilct:
+  category: general
+  description: QuickShop localization text for edition confilct.
+  audience:
+    - player
+empty-success:
+  category: general
+  description: Confirmation or status message shown for empty success.
+  audience:
+    - player
+exceeded-maximum:
+  category: general
+  description: QuickShop localization text for exceeded maximum.
+  audience:
+    - player
+exported-database:
+  category: general
+  description: QuickShop localization text for exported database.
+  audience:
+    - player
+  placeholders:
+    '0': To string
+exporting-database:
+  category: general
+  description: QuickShop localization text for exporting database.
+  audience:
+    - player
+exporting-failed:
+  category: general
+  description: Error message shown when exporting failed.
+  audience:
+    - player
+failed-to-paste:
+  category: general
+  description: Error message shown when failed to paste.
+  audience:
+    - player
+failed-to-put-sign:
+  category: general
+  description: Error message shown when failed to put sign.
+  audience:
+    - player
+fee-charged-for-price-change:
+  category: transactions
+  description: Transaction message shown for fee charged for price change.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': You paid
+file-test:
+  category: general
+  description: QuickShop localization text for file test.
+  audience:
+    - player
+flush-finished:
+  category: general
+  description: QuickShop localization text for flush finished.
+  audience:
+    - player
+forbidden-vanilla-behavior:
+  category: general
+  description: QuickShop localization text for forbidden vanilla behavior.
+  audience:
+    - player
+gui.browse.back.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.browse.filter.all:
+  category: gui
+  description: Text displayed in the QuickShop GUI for all.
+  audience:
+    - player
+gui.browse.filter.all-indicator:
+  category: gui
+  description: Text displayed in the QuickShop GUI for all indicator.
+  audience:
+    - player
+gui.browse.filter.buying:
+  category: gui
+  description: Text displayed in the QuickShop GUI for buying.
+  audience:
+    - player
+gui.browse.filter.buying-indicator:
+  category: gui
+  description: Text displayed in the QuickShop GUI for buying indicator.
+  audience:
+    - player
+gui.browse.filter.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Filter
+gui.browse.filter.lore:
+  category: gui
+  description: Lore text displayed for filter lore in a QuickShop GUI.
+  audience:
+    - player
+gui.browse.filter.selling:
+  category: gui
+  description: Text displayed in the QuickShop GUI for selling.
+  audience:
+    - player
+gui.browse.filter.selling-indicator:
+  category: gui
+  description: Text displayed in the QuickShop GUI for selling indicator.
+  audience:
+    - player
+gui.browse.grouped-item.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+gui.browse.grouped-item.lore-buying:
+  category: gui
+  description: Lore text displayed for lore buying in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Buying Shop Count
+    '1': Buying Min Price
+    '2': Buying Max Price
+    '3': Buying Avg Price
+    '4': Buying Median Price
+gui.browse.grouped-item.lore-footer:
+  category: gui
+  description: Lore text displayed for lore footer in a QuickShop GUI.
+  audience:
+    - player
+gui.browse.grouped-item.lore-selling:
+  category: gui
+  description: Lore text displayed for lore selling in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Selling Shop Count
+    '1': Selling Min Price
+    '2': Selling Max Price
+    '3': Selling Avg Price
+    '4': Selling Median Price
+    '5': Selling Total Stock
+gui.browse.grouped-item.lore-title:
+  category: gui
+  description: Lore text displayed for lore title in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Total Shop Count
+gui.browse.search-item.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+gui.browse.search-item.lore:
+  category: gui
+  description: Lore text displayed for search item lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Showing
+    '1': Shops
+    '2': Average price
+gui.browse.search.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Search
+gui.browse.search.lore:
+  category: gui
+  description: Lore text displayed for search lore in a QuickShop GUI.
+  audience:
+    - player
+gui.browse.shop-item.lore:
+  category: gui
+  description: Lore text displayed for shop item lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Owner
+    '1': Location
+    '2': Type
+    '3': Price
+    '4': Stock
+gui.browse.shop-list.buying-label:
+  category: gui
+  description: Text displayed in the QuickShop GUI for buying label.
+  audience:
+    - player
+gui.browse.shop-list.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+gui.browse.shop-list.lore:
+  category: gui
+  description: Lore text displayed for shop list lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Owner
+    '1': Type
+    '2': Price
+    '3': Runtime value for placeholder {3}
+    '4': Location
+    '5': Runtime value for placeholder {5}
+gui.browse.shop-list.price-indicator.average:
+  category: gui
+  description: Text displayed in the QuickShop GUI for average.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.buying.bad:
+  category: gui
+  description: Text displayed in the QuickShop GUI for bad.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.buying.good:
+  category: gui
+  description: Text displayed in the QuickShop GUI for good.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.buying.great:
+  category: gui
+  description: Text displayed in the QuickShop GUI for great.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.buying.worst:
+  category: gui
+  description: Text displayed in the QuickShop GUI for worst.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.selling.bad:
+  category: gui
+  description: Text displayed in the QuickShop GUI for bad.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.selling.good:
+  category: gui
+  description: Text displayed in the QuickShop GUI for good.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.selling.great:
+  category: gui
+  description: Text displayed in the QuickShop GUI for great.
+  audience:
+    - player
+gui.browse.shop-list.price-indicator.selling.worst:
+  category: gui
+  description: Text displayed in the QuickShop GUI for worst.
+  audience:
+    - player
+gui.browse.shop-list.selling-label:
+  category: gui
+  description: Text displayed in the QuickShop GUI for selling label.
+  audience:
+    - player
+gui.browse.shop-list.teleport:
+  category: gui
+  description: Text displayed in the QuickShop GUI for teleport.
+  audience:
+    - player
+gui.browse.sort.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Sort
+gui.browse.sort.lore:
+  category: gui
+  description: Lore text displayed for sort lore in a QuickShop GUI.
+  audience:
+    - player
+gui.browse.sort.name:
+  category: gui
+  description: Display name used for sort name in a QuickShop GUI.
+  audience:
+    - player
+gui.browse.sort.price-asc:
+  category: gui
+  description: Text displayed in the QuickShop GUI for price asc.
+  audience:
+    - player
+gui.browse.sort.price-desc:
+  category: gui
+  description: Text displayed in the QuickShop GUI for price desc.
+  audience:
+    - player
+gui.browse.sort.stock:
+  category: gui
+  description: Text displayed in the QuickShop GUI for stock.
+  audience:
+    - player
+gui.browse.stock-filter.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': In Stock Only
+gui.browse.stock-filter.lore:
+  category: gui
+  description: Lore text displayed for stock filter lore in a QuickShop GUI.
+  audience:
+    - player
+gui.browse.title:
+  category: gui
+  description: Title text displayed in the browse title GUI.
+  audience:
+    - player
+gui.keeper.change-price.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.change-price.lore:
+  category: gui
+  description: Lore text displayed for change price lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Current price
+gui.keeper.display-toggle.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.display-toggle.lore:
+  category: gui
+  description: Lore text displayed for display toggle lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Status
+gui.keeper.freeze-toggle.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.freeze-toggle.lore:
+  category: gui
+  description: Lore text displayed for freeze toggle lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Currently
+    '1': Click to
+gui.keeper.history.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.history.lore:
+  category: gui
+  description: Lore text displayed for history lore in a QuickShop GUI.
+  audience:
+    - player
+gui.keeper.inventory.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.inventory.lore:
+  category: gui
+  description: Lore text displayed for inventory lore in a QuickShop GUI.
+  audience:
+    - player
+gui.keeper.mode-toggle.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.mode-toggle.lore:
+  category: gui
+  description: Lore text displayed for mode toggle lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Current
+    '1': Click to change to
+gui.keeper.remove.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.keeper.remove.lore:
+  category: gui
+  description: Lore text displayed for remove lore in a QuickShop GUI.
+  audience:
+    - player
+gui.keeper.staff.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - shop-owner
+gui.keeper.staff.lore:
+  category: gui
+  description: Lore text displayed for staff lore in a QuickShop GUI.
+  audience:
+    - shop-owner
+gui.keeper.title:
+  category: gui
+  description: Title text displayed in the keeper title GUI.
+  audience:
+    - player
+gui.messages.browse.enter-search:
+  category: gui
+  description: GUI feedback message shown for enter search.
+  audience:
+    - player
+gui.messages.keeper.confirm-delete:
+  category: gui
+  description: GUI feedback message shown for confirm delete.
+  audience:
+    - player
+gui.messages.keeper.enter-price:
+  category: gui
+  description: GUI feedback message shown for enter price.
+  audience:
+    - player
+gui.messages.staff.confirm-remove:
+  category: gui
+  description: GUI feedback message shown for confirm remove.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Type confirm to remove
+gui.messages.staff.confirm-transfer:
+  category: gui
+  description: GUI feedback message shown for confirm transfer.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': To transfer ownership to
+gui.messages.staff.enter-search:
+  category: gui
+  description: GUI feedback message shown for enter search.
+  audience:
+    - shop-owner
+gui.messages.trade.enter-buy:
+  category: gui
+  description: GUI feedback message shown for enter buy.
+  audience:
+    - player
+  placeholders:
+    '0': Be a multiple of
+gui.messages.trade.enter-sell:
+  category: gui
+  description: GUI feedback message shown for enter sell.
+  audience:
+    - player
+  placeholders:
+    '0': Be a multiple of
+gui.messages.trade.invalid-multiple:
+  category: gui
+  description: GUI feedback message shown for invalid multiple.
+  audience:
+    - player
+  placeholders:
+    '0': Be a multiple of
+gui.messages.trade.invalid-stock:
+  category: gui
+  description: GUI feedback message shown for invalid stock.
+  audience:
+    - player
+gui.shared.back.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.shared.close.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.shared.next-page.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.shared.page-info.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+  placeholders:
+    '0': Page
+    '1': Page 0 /
+gui.shared.previous-page.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.staff.add-staff.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - shop-owner
+gui.staff.add-staff.lore:
+  category: gui
+  description: Lore text displayed for add staff lore in a QuickShop GUI.
+  audience:
+    - shop-owner
+gui.staff.back.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - shop-owner
+gui.staff.search.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Search
+gui.staff.search.lore:
+  category: gui
+  description: Lore text displayed for search lore in a QuickShop GUI.
+  audience:
+    - shop-owner
+gui.staff.title:
+  category: gui
+  description: Title text displayed in the staff title GUI.
+  audience:
+    - shop-owner
+gui.trade.custom-amount.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.trade.info-price.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.trade.info-price.lore:
+  category: gui
+  description: Lore text displayed for info price lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Price
+    '1': Item amount
+gui.trade.info-seller.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.trade.info-seller.lore:
+  category: gui
+  description: Lore text displayed for info seller lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Owner
+gui.trade.info-stock.display:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display.
+  audience:
+    - player
+gui.trade.info-stock.lore:
+  category: gui
+  description: Lore text displayed for info stock lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Available
+gui.trade.quantity-button.display-buy:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display buy.
+  audience:
+    - player
+  placeholders:
+    '0': Buy x
+gui.trade.quantity-button.display-sell:
+  category: gui
+  description: Text displayed in the QuickShop GUI for display sell.
+  audience:
+    - player
+  placeholders:
+    '0': Sell x
+gui.trade.quantity-button.lore:
+  category: gui
+  description: Lore text displayed for quantity button lore in a QuickShop GUI.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+gui.trade.title:
+  category: gui
+  description: Title text displayed in the trade title GUI.
+  audience:
+    - player
+history-command-leave-blank:
+  category: history
+  description: Shop history text for history command leave blank.
+  audience:
+    - player
+history.shop.current-page:
+  category: history
+  description: Shop history text for current page.
+  audience:
+    - player
+  placeholders:
+    '0': Page
+history.shop.gui-title:
+  category: history
+  description: Shop history text for gui title.
+  audience:
+    - player
+history.shop.header-icon-description:
+  category: history
+  description: Shop history text for header icon description.
+  audience:
+    - player
+  placeholders:
+    '0': Type
+    '1': Item amount
+    '2': Item
+    '3': Price
+    '4': 3 x
+    '5': Location
+history.shop.header-icon-multiple-shop:
+  category: history
+  description: Shop history text for header icon multiple shop.
+  audience:
+    - player
+  placeholders:
+    '0': The query result across
+history.shop.header-icon-shop-empty-name:
+  category: history
+  description: Shop history text for header icon shop empty name.
+  audience:
+    - player
+  placeholders:
+    '0': World
+    '1': World 0 at x
+    '2': 1 y
+    '3': 2 z
+history.shop.header-icon-shop-name:
+  category: history
+  description: Shop history text for header icon shop name.
+  audience:
+    - player
+  placeholders:
+    '0': Shop
+history.shop.log-icon-description:
+  category: history
+  description: Shop history text for log icon description.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Item
+    '2': 1 x
+    '3': Tax amount
+    '4': Tax
+history.shop.log-icon-description-with-store-name:
+  category: history
+  description: Shop history text for log icon description with store name.
+  audience:
+    - player
+  placeholders:
+    '0': Store
+    '1': Item amount
+    '2': Item
+    '3': 2 x
+    '4': Amount
+    '5': Tax amount
+    '6': Net
+history.shop.log-icon-title:
+  category: history
+  description: Shop history text for log icon title.
+  audience:
+    - player
+  placeholders:
+    '0': Time
+history.shop.multi-shops-icon-title:
+  category: history
+  description: Shop history text for multi shops icon title.
+  audience:
+    - player
+history.shop.no-result:
+  category: history
+  description: Shop history text for no result.
+  audience:
+    - player
+history.shop.query-icon:
+  category: history
+  description: Shop history text for query icon.
+  audience:
+    - player
+history.shop.summary-icon-description:
+  category: history
+  description: Shop history text for summary icon description.
+  audience:
+    - player
+  placeholders:
+    '0': Total unique purchasers
+    '2': Recent
+    '3': Recent 2 purchases
+    '4': Recent
+    '5': Recent 4 purchases
+    '6': Recent
+    '7': Recent 6 purchases
+    '8': Recent
+    '9': Recent 8 purchases
+    '10': Total purchases
+    '11': Recent
+    '12': Recent 11 turnover
+    '13': Recent
+    '14': Recent 13 turnover
+    '15': Recent
+    '16': Recent 15 turnover
+    '17': Recent
+    '18': Recent 17 turnover
+    '19': Total turnover
+history.shop.summary-icon-title:
+  category: history
+  description: Shop history text for summary icon title.
+  audience:
+    - player
+history.shop.top-n-valuable-customers-entry:
+  category: history
+  description: Shop history text for top n valuable customers entry.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': '0'
+history.shop.top-n-valuable-customers-title:
+  category: history
+  description: Shop history text for top n valuable customers title.
+  audience:
+    - player
+  placeholders:
+    '0': Top
+history.shop.total-unique-purchasers:
+  category: history
+  description: Shop history text for total unique purchasers.
+  audience:
+    - player
+  placeholders:
+    '0': Total unique purchasers
+how-many-buy:
+  category: general
+  description: QuickShop localization text for how many buy.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Trade all word
+how-many-buy-stack:
+  category: general
+  description: QuickShop localization text for how many buy stack.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Item amount
+    '2': Trade all word
+how-many-sell:
+  category: general
+  description: QuickShop localization text for how many sell.
+  audience:
+    - player
+  placeholders:
+    '0': Items
+    '1': Trade all word
+how-many-sell-stack:
+  category: general
+  description: QuickShop localization text for how many sell stack.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Items
+    '2': Trade all word
+how-much-to-trade-for:
+  category: general
+  description: QuickShop localization text for how much to trade for.
+  audience:
+    - player
+  placeholders:
+    '0': Localized item name
+    '1': Item amount
+imported-database:
+  category: general
+  description: QuickShop localization text for imported database.
+  audience:
+    - player
+  placeholders:
+    '0': Zip
+importing-database:
+  category: general
+  description: QuickShop localization text for importing database.
+  audience:
+    - player
+importing-early-warning:
+  category: general
+  description: Warning message shown for importing early warning.
+  audience:
+    - player
+importing-failed:
+  category: general
+  description: Error message shown when importing failed.
+  audience:
+    - player
+importing-not-found:
+  category: general
+  description: QuickShop localization text for importing not found.
+  audience:
+    - player
+  placeholders:
+    '0': Zip
+integrations-check-failed-create:
+  category: general
+  description: Error message shown when integrations check failed create.
+  audience:
+    - player
+  placeholders:
+    '0': Integration
+integrations-check-failed-trade:
+  category: general
+  description: Error message shown when integrations check failed trade.
+  audience:
+    - player
+  placeholders:
+    '0': Integration
+internal-error:
+  category: general
+  description: Error message shown when internal error.
+  audience:
+    - player
+internet-paste-forbidden-privacy-reason:
+  category: general
+  description: QuickShop localization text for internet paste forbidden privacy reason.
+  audience:
+    - player
+invalid-container:
+  category: general
+  description: Error message shown when invalid container.
+  audience:
+    - player
+invalid-group:
+  category: general
+  description: Error message shown when invalid group.
+  audience:
+    - player
+invalid-operation:
+  category: general
+  description: Error message shown when invalid operation.
+  audience:
+    - player
+  placeholders:
+    '0': Invalid operation only
+invalid-past-time:
+  category: general
+  description: Error message shown when invalid past time.
+  audience:
+    - player
+invalid-percentage:
+  category: general
+  description: Error message shown when invalid percentage.
+  audience:
+    - player
+invalid-permission:
+  category: general
+  description: Error message shown when invalid permission.
+  audience:
+    - player
+inventory-check-global-alert:
+  category: general
+  description: QuickShop localization text for inventory check global alert.
+  audience:
+    - player
+  placeholders:
+    '0': Location
+    '1': In inventory at 0
+    '2': Localized item name
+inventory-error:
+  category: general
+  description: Error message shown when inventory error.
+  audience:
+    - player
+  placeholders:
+    '0': Exception
+    '1': Exception 0 InventoryWrapper
+    '2': 0 InventoryWrapper 1 WrapperType
+    '3': 1 WrapperType 2 WrapperProvider
+    '4': 2 WrapperProvider 3 SymbolLink
+inventory-space-full:
+  category: general
+  description: QuickShop localization text for inventory space full.
+  audience:
+    - player
+  placeholders:
+    '1': Player space
+inventory-unavailable:
+  category: general
+  description: QuickShop localization text for inventory unavailable.
+  audience:
+    - player
+  placeholders:
+    '0': InventoryWrapper
+    '1': InventoryWrapper 0 WrapperProvider
+    '2': 0 WrapperProvider 1 SymbolLink
+item-not-exist:
+  category: general
+  description: QuickShop localization text for item not exist.
+  audience:
+    - player
+  placeholders:
+    '0': Mat name
+language-info-panel.code:
+  category: language
+  description: Language-selection or localization text for code.
+  audience:
+    - player
+language-info-panel.help:
+  category: language
+  description: Language-selection or localization text for help.
+  audience:
+    - player
+language-info-panel.name:
+  category: language
+  description: Language-selection or localization text for language info panel name.
+  audience:
+    - player
+language-info-panel.progress:
+  category: language
+  description: Language-selection or localization text for progress.
+  audience:
+    - player
+language-info-panel.translate-on-crowdin:
+  category: language
+  description: Language-selection or localization text for translate on crowdin.
+  audience:
+    - player
+language-version:
+  category: language
+  description: Language-selection or localization text for language version.
+  audience:
+    - player
+language.approval-progress:
+  category: language
+  description: Language-selection or localization text for approval progress.
+  audience:
+    - player
+  placeholders:
+    '0': Approval Progress
+language.code:
+  category: language
+  description: Language-selection or localization text for code.
+  audience:
+    - player
+  placeholders:
+    '0': Code
+language.help-us:
+  category: language
+  description: Language-selection or localization text for help us.
+  audience:
+    - player
+language.name:
+  category: language
+  description: Language-selection or localization text for language name.
+  audience:
+    - player
+  placeholders:
+    '0': Name
+language.qa-issues:
+  category: language
+  description: Language-selection or localization text for qa issues.
+  audience:
+    - player
+  placeholders:
+    '0': Quality assurance issues
+language.translate-progress:
+  category: language
+  description: Language-selection or localization text for translate progress.
+  audience:
+    - player
+  placeholders:
+    '0': Translation Progress
+lookup-item-created:
+  category: general
+  description: Confirmation or status message shown for lookup item created.
+  audience:
+    - player
+  placeholders:
+    '0': Item ref name
+lookup-item-exists:
+  category: general
+  description: QuickShop localization text for lookup item exists.
+  audience:
+    - player
+  placeholders:
+    '0': Item ref name
+lookup-item-name-illegal:
+  category: general
+  description: QuickShop localization text for lookup item name illegal.
+  audience:
+    - player
+lookup-item-name-regex:
+  category: general
+  description: QuickShop localization text for lookup item name regex.
+  audience:
+    - player
+  placeholders:
+    '0': Name Reg Exp
+lookup-item-not-found:
+  category: general
+  description: QuickShop localization text for lookup item not found.
+  audience:
+    - player
+  placeholders:
+    '0': Item ref name
+lookup-item-removed:
+  category: general
+  description: Confirmation or status message shown for lookup item removed.
+  audience:
+    - player
+  placeholders:
+    '0': Item ref name
+lookup-item-test-found:
+  category: general
+  description: QuickShop localization text for lookup item test found.
+  audience:
+    - player
+  placeholders:
+    '0': Hand was registered as
+lookup-item-test-not-found:
+  category: general
+  description: QuickShop localization text for lookup item test not found.
+  audience:
+    - player
+menu.damage-percent-remaining:
+  category: menu
+  description: Menu text displayed for damage percent remaining.
+  audience:
+    - player
+  placeholders:
+    '0': Tool Percentage
+menu.effects:
+  category: menu
+  description: Menu text displayed for effects.
+  audience:
+    - player
+menu.enchants:
+  category: menu
+  description: Menu text displayed for enchants.
+  audience:
+    - player
+menu.item:
+  category: menu
+  description: Menu text displayed for item.
+  audience:
+    - player
+  placeholders:
+    '0': Localized item name
+menu.item-holochat-data-too-large:
+  category: menu
+  description: Menu text displayed for item holochat data too large.
+  audience:
+    - player
+menu.item-holochat-error:
+  category: menu
+  description: Menu text displayed for item holochat error.
+  audience:
+    - player
+menu.item-name-and-price:
+  category: menu
+  description: Menu text displayed for item name and price.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Localized item name
+    '2': 0 1 for
+menu.item-name-and-price-tax:
+  category: menu
+  description: Menu text displayed for item name and price tax.
+  audience:
+    - player
+  placeholders:
+    '0': Item amount
+    '1': Localized item name
+    '2': 0 1 for
+    '3': Tax amount
+menu.owner:
+  category: menu
+  description: Menu text displayed for owner.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Owner
+menu.preview:
+  category: menu
+  description: Menu text displayed for preview.
+  audience:
+    - player
+menu.price-per:
+  category: menu
+  description: Menu text displayed for price per.
+  audience:
+    - player
+  placeholders:
+    '0': Localized item name
+    '1': Price per 0
+menu.price-per-stack:
+  category: menu
+  description: Menu text displayed for price per stack.
+  audience:
+    - player
+  placeholders:
+    '0': Localized item name
+    '1': Per 2 x 0
+    '2': Item amount
+menu.sell-tax:
+  category: menu
+  description: Menu text displayed for sell tax.
+  audience:
+    - player
+  placeholders:
+    '0': Tax amount
+menu.sell-tax-self:
+  category: menu
+  description: Menu text displayed for sell tax self.
+  audience:
+    - player
+menu.shop-information:
+  category: menu
+  description: Menu text displayed for shop information.
+  audience:
+    - player
+menu.shop-stack:
+  category: menu
+  description: Menu text displayed for shop stack.
+  audience:
+    - player
+  placeholders:
+    '0': Amount of bulk
+menu.space:
+  category: menu
+  description: Menu text displayed for space.
+  audience:
+    - player
+  placeholders:
+    '0': For locale
+menu.stock:
+  category: menu
+  description: Menu text displayed for stock.
+  audience:
+    - player
+  placeholders:
+    '0': For locale
+menu.stored-enchants:
+  category: menu
+  description: Menu text displayed for stored enchants.
+  audience:
+    - player
+menu.successful-purchase:
+  category: menu
+  description: Menu text displayed for successful purchase.
+  audience:
+    - player
+menu.successfully-sold:
+  category: menu
+  description: Menu text displayed for successfully sold.
+  audience:
+    - player
+menu.this-shop-is-active:
+  category: menu
+  description: Menu text displayed for this shop is active.
+  audience:
+    - player
+menu.this-shop-is-buying:
+  category: menu
+  description: Menu text displayed for this shop is buying.
+  audience:
+    - player
+menu.this-shop-is-frozen:
+  category: menu
+  description: Menu text displayed for this shop is frozen.
+  audience:
+    - player
+menu.this-shop-is-selling:
+  category: menu
+  description: Menu text displayed for this shop is selling.
+  audience:
+    - player
+menu.this-shop-is-state:
+  category: menu
+  description: Menu text displayed for this shop is state.
+  audience:
+    - player
+  placeholders:
+    '0': Player
+menu.total-value-of-chest:
+  category: menu
+  description: Menu text displayed for total value of chest.
+  audience:
+    - player
+  placeholders:
+    '0': Total value of chest
+metric.action-description.CREATE:
+  category: metrics
+  description: Metrics or telemetry text for CREATE.
+  audience:
+    - server-administrator
+metric.action-description.DELETE:
+  category: metrics
+  description: Metrics or telemetry text for DELETE.
+  audience:
+    - server-administrator
+metric.action-description.ONGOING_FEE:
+  category: metrics
+  description: Metrics or telemetry text for ONGOING FEE.
+  audience:
+    - server-administrator
+metric.action-description.PURCHASE:
+  category: metrics
+  description: Metrics or telemetry text for PURCHASE.
+  audience:
+    - server-administrator
+metric.action-description.PURCHASE_BUYING_SHOP:
+  category: metrics
+  description: Metrics or telemetry text for PURCHASE BUYING SHOP.
+  audience:
+    - server-administrator
+metric.action-description.PURCHASE_SELLING_SHOP:
+  category: metrics
+  description: Metrics or telemetry text for PURCHASE SELLING SHOP.
+  audience:
+    - server-administrator
+metric.action-hover:
+  category: metrics
+  description: Metrics or telemetry text for action hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+metric.amount-hover:
+  category: metrics
+  description: Metrics or telemetry text for amount hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+metric.amount-stack-hover:
+  category: metrics
+  description: Metrics or telemetry text for amount stack hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+metric.header-global:
+  category: metrics
+  description: Metrics or telemetry text for header global.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': The server
+    '1': The server 0
+metric.header-player:
+  category: metrics
+  description: Metrics or telemetry text for header player.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': 0 s
+    '2': 0 s 1
+metric.header-shop:
+  category: metrics
+  description: Metrics or telemetry text for header shop.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': The shop
+    '1': The shop 0 s
+    '2': Shop 0 s 1
+metric.looking-up:
+  category: metrics
+  description: Metrics or telemetry text for looking up.
+  audience:
+    - server-administrator
+metric.na:
+  category: metrics
+  description: Metrics or telemetry text for na.
+  audience:
+    - server-administrator
+metric.no-results:
+  category: metrics
+  description: Metrics or telemetry text for no results.
+  audience:
+    - server-administrator
+metric.player-hover:
+  category: metrics
+  description: Metrics or telemetry text for player hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': UUID
+metric.price-hover:
+  category: metrics
+  description: Metrics or telemetry text for price hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Total
+    '1': Tax amount
+metric.query-argument:
+  category: metrics
+  description: Metrics or telemetry text for query argument.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Query Argument
+metric.shop-hover:
+  category: metrics
+  description: Metrics or telemetry text for shop hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': Pos
+    '2': '1'
+    '3': 1 2
+    '4': 1 2 3 World
+    '5': Owner
+    '6': Item amount
+    '7': Item
+    '8': Price
+metric.tax-hover:
+  category: metrics
+  description: Metrics or telemetry text for tax hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Tax amount
+metric.time-hover:
+  category: metrics
+  description: Metrics or telemetry text for time hover.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Time
+metric.transaction-count:
+  category: metrics
+  description: Metrics or telemetry text for transaction count.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+metric.undefined:
+  category: metrics
+  description: Metrics or telemetry text for undefined.
+  audience:
+    - server-administrator
+metric.unknown:
+  category: metrics
+  description: Metrics or telemetry text for unknown.
+  audience:
+    - server-administrator
+nearby-shop-entry:
+  category: shops
+  description: Shop-related message or label for nearby shop entry.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Command sender
+    '1': Command sender
+    '2': Block X
+    '3': Block Y
+    '4': Block Z
+    '5': 4 Distance
+nearby-shop-header:
+  category: shops
+  description: Shop-related message or label for nearby shop header.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Look for
+nearby-shop-this-way:
+  category: shops
+  description: Shop-related message or label for nearby shop this way.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Shop is
+negative-amount:
+  category: general
+  description: QuickShop localization text for negative amount.
+  audience:
+    - player
+no-anythings-in-your-hand:
+  category: general
+  description: QuickShop localization text for no anythings in your hand.
+  audience:
+    - player
+no-creative-break:
+  category: general
+  description: QuickShop localization text for no creative break.
+  audience:
+    - player
+  placeholders:
+    '0': Component
+no-double-chests:
+  category: general
+  description: QuickShop localization text for no double chests.
+  audience:
+    - player
+no-enough-money-to-keep-shops:
+  category: shops
+  description: Shop-related message or label for no enough money to keep shops.
+  audience:
+    - player
+    - shop-owner
+no-nearby-shop:
+  category: shops
+  description: Shop-related message or label for no nearby shop.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Look for
+no-pending-action:
+  category: general
+  description: QuickShop localization text for no pending action.
+  audience:
+    - player
+no-permission:
+  category: general
+  description: QuickShop localization text for no permission.
+  audience:
+    - player
+no-permission-build:
+  category: general
+  description: QuickShop localization text for no permission build.
+  audience:
+    - player
+no-permission-detailed:
+  category: general
+  description: QuickShop localization text for no permission detailed.
+  audience:
+    - player
+  placeholders:
+    '0': Don t have permission
+no-price-change:
+  category: transactions
+  description: Transaction message shown for no price change.
+  audience:
+    - player
+    - shop-owner
+no-price-given:
+  category: transactions
+  description: Transaction message shown for no price given.
+  audience:
+    - player
+    - shop-owner
+no-sign-type-given:
+  category: general
+  description: QuickShop localization text for no sign type given.
+  audience:
+    - player
+  placeholders:
+    '0': Available on this server
+not-a-integer:
+  category: general
+  description: QuickShop localization text for not a integer.
+  audience:
+    - player
+  placeholders:
+    '0': Args
+not-a-number:
+  category: general
+  description: QuickShop localization text for not a number.
+  audience:
+    - player
+  placeholders:
+    '0': Pass through args
+not-a-valid-time:
+  category: general
+  description: QuickShop localization text for not a valid time.
+  audience:
+    - player
+  placeholders:
+    '0': Pass through args
+not-allowed-to-create:
+  category: general
+  description: Error message shown when not allowed to create.
+  audience:
+    - player
+not-enough-space:
+  category: general
+  description: QuickShop localization text for not enough space.
+  audience:
+    - player
+  placeholders:
+    '0': Inv have spaces
+not-looking-at-shop:
+  category: shops
+  description: Shop-related message or label for not looking at shop.
+  audience:
+    - player
+    - shop-owner
+not-looking-at-valid-shop-block:
+  category: shops
+  description: Shop-related message or label for not looking at valid shop block.
+  audience:
+    - player
+    - shop-owner
+not-managed-shop:
+  category: shops
+  description: Shop-related message or label for not managed shop.
+  audience:
+    - player
+    - shop-owner
+nothing-to-flush:
+  category: general
+  description: QuickShop localization text for nothing to flush.
+  audience:
+    - player
+owner-bypass-check:
+  category: general
+  description: QuickShop localization text for owner bypass check.
+  audience:
+    - shop-owner
+pagination.footer:
+  category: formatting
+  description: Localized formatting text for footer.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': Previous page
+    '2': Previous page 1 /
+    '3': Runtime value for placeholder {3}
+pagination.header:
+  category: formatting
+  description: Localized formatting text for header.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+paste-451:
+  category: general
+  description: QuickShop localization text for paste 451.
+  audience:
+    - player
+paste-created:
+  category: general
+  description: Confirmation or status message shown for paste created.
+  audience:
+    - player
+  placeholders:
+    '0': Url
+paste-created-local:
+  category: general
+  description: Confirmation or status message shown for paste created local.
+  audience:
+    - player
+  placeholders:
+    '0': Absolute Path
+paste-created-local-failed:
+  category: general
+  description: Error message shown when paste created local failed.
+  audience:
+    - player
+paste-disabled:
+  category: general
+  description: Confirmation or status message shown for paste disabled.
+  audience:
+    - player
+  placeholders:
+    '0': Reason
+paste-notice:
+  category: general
+  description: QuickShop localization text for paste notice.
+  audience:
+    - player
+paste-upload-failed:
+  category: general
+  description: Error message shown when paste upload failed.
+  audience:
+    - player
+  placeholders:
+    '0': To upload paste to
+paste-upload-failed-local:
+  category: general
+  description: Error message shown when paste upload failed local.
+  audience:
+    - player
+paste-uploading:
+  category: general
+  description: QuickShop localization text for paste uploading.
+  audience:
+    - player
+permission-denied-3rd-party:
+  category: permissions
+  description: Permission-related message shown for permission denied 3rd party.
+  audience:
+    - player
+  placeholders:
+    '0': Denied by 3rd-party Plugin
+permission-required:
+  category: permissions
+  description: Permission-related message shown for permission required.
+  audience:
+    - player
+  placeholders:
+    '0': Don t have permission
+permission.group.administrator:
+  category: permissions
+  description: Permission-related message shown for administrator.
+  audience:
+    - server-administrator
+permission.group.everyone:
+  category: permissions
+  description: Permission-related message shown for everyone.
+  audience:
+    - player
+permission.group.staff:
+  category: permissions
+  description: Permission-related message shown for staff.
+  audience:
+    - shop-owner
+permission.header:
+  category: permissions
+  description: Permission-related message shown for header.
+  audience:
+    - player
+permission.header-group:
+  category: permissions
+  description: Permission-related message shown for header group.
+  audience:
+    - player
+  placeholders:
+    '0': Permission Details for group
+permission.header-player:
+  category: permissions
+  description: Permission-related message shown for header player.
+  audience:
+    - player
+  placeholders:
+    '0': Shop Permission Details for
+permission.item.access-inventory:
+  category: permissions
+  description: Permission-related message shown for access inventory.
+  audience:
+    - player
+permission.item.delete:
+  category: permissions
+  description: Permission-related message shown for delete.
+  audience:
+    - player
+permission.item.management-permission:
+  category: permissions
+  description: Permission-related message shown for management permission.
+  audience:
+    - player
+permission.item.ownership-transfer:
+  category: permissions
+  description: Permission-related message shown for ownership transfer.
+  audience:
+    - shop-owner
+permission.item.preview-shop:
+  category: permissions
+  description: Permission-related message shown for preview shop.
+  audience:
+    - player
+permission.item.purchase:
+  category: permissions
+  description: Permission-related message shown for purchase.
+  audience:
+    - player
+permission.item.receive-alert:
+  category: permissions
+  description: Permission-related message shown for receive alert.
+  audience:
+    - player
+permission.item.search:
+  category: permissions
+  description: Permission-related message shown for search.
+  audience:
+    - player
+permission.item.set-currency:
+  category: permissions
+  description: Permission-related message shown for set currency.
+  audience:
+    - player
+permission.item.set-item:
+  category: permissions
+  description: Permission-related message shown for set item.
+  audience:
+    - player
+permission.item.set-name:
+  category: permissions
+  description: Permission-related message shown for set name.
+  audience:
+    - player
+permission.item.set-price:
+  category: permissions
+  description: Permission-related message shown for set price.
+  audience:
+    - player
+permission.item.set-shoptype:
+  category: permissions
+  description: Permission-related message shown for set shoptype.
+  audience:
+    - player
+permission.item.set-sign-type:
+  category: permissions
+  description: Permission-related message shown for set sign type.
+  audience:
+    - player
+permission.item.set-stack-amount:
+  category: permissions
+  description: Permission-related message shown for set stack amount.
+  audience:
+    - player
+permission.item.show-information:
+  category: permissions
+  description: Permission-related message shown for show information.
+  audience:
+    - player
+permission.item.toggle-display:
+  category: permissions
+  description: Permission-related message shown for toggle display.
+  audience:
+    - player
+permission.item.view-purchase-logs:
+  category: permissions
+  description: Permission-related message shown for view purchase logs.
+  audience:
+    - player
+permission.table:
+  category: permissions
+  description: Permission-related message shown for table.
+  audience:
+    - player
+  placeholders:
+    '0': Name
+    '1': '0'
+player-bought-from-your-store:
+  category: transactions
+  description: Transaction message shown for player bought from your store.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Other player involved in the transaction
+    '1': Item amount
+    '2': Localized item name
+    '3': Shop owner earnings
+player-bought-from-your-store-tax:
+  category: transactions
+  description: Transaction message shown for player bought from your store tax.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Other player involved in the transaction
+    '1': Item amount
+    '2': Localized item name
+    '3': Shop owner earnings
+    '4': Tax amount
+player-in-group:
+  category: general
+  description: QuickShop localization text for player in group.
+  audience:
+    - player
+  placeholders:
+    '0': Player
+    '1': 0 is in group
+player-no-group:
+  category: general
+  description: QuickShop localization text for player no group.
+  audience:
+    - player
+  placeholders:
+    '0': Player
+player-offline:
+  category: general
+  description: QuickShop localization text for player offline.
+  audience:
+    - player
+player-profile-format:
+  category: general
+  description: QuickShop localization text for player profile format.
+  audience:
+    - player
+  placeholders:
+    '0': Name
+    '1': Uuid
+player-sold-to-your-store:
+  category: transactions
+  description: Transaction message shown for player sold to your store.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Display
+    '1': Amount
+    '2': Localized item name
+    '3': To your shop for
+plugin-cancelled:
+  category: general
+  description: QuickShop localization text for plugin cancelled.
+  audience:
+    - player
+  placeholders:
+    '0': Cancel Reason
+price-is-now:
+  category: transactions
+  description: Transaction message shown for price is now.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Of the shop is
+price-suggest:
+  category: transactions
+  description: Transaction message shown for price suggest.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Size
+    '1': Shop1
+    '2': Shop1
+    '3': Shop1
+    '4': Shop1
+    '5': Shop1
+price-suggest-multi:
+  category: transactions
+  description: Transaction message shown for price suggest multi.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Command sender
+    '1': Suggest
+price-too-cheap:
+  category: transactions
+  description: Transaction message shown for price too cheap.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Min formatted
+price-too-high:
+  category: transactions
+  description: Transaction message shown for price too high.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Max formatted
+purchase-failed:
+  category: transactions
+  description: Error message shown when purchase failed.
+  audience:
+    - player
+    - shop-owner
+purchase-out-of-space:
+  category: transactions
+  description: Transaction message shown for purchase out of space.
+  audience:
+    - player
+    - shop-owner
+purchase-out-of-stock:
+  category: transactions
+  description: Transaction message shown for purchase out of stock.
+  audience:
+    - player
+    - shop-owner
+quick-fill.entry-cooperation:
+  category: general
+  description: QuickShop localization text for entry cooperation.
+  audience:
+    - player
+  placeholders:
+    '0': Co
+    '1': Co 0
+quick-fill.entry-normal:
+  category: general
+  description: QuickShop localization text for entry normal.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': '0'
+quick-fill.entry-own:
+  category: general
+  description: QuickShop localization text for entry own.
+  audience:
+    - player
+  placeholders:
+    '0': Own
+    '1': Own 0
+quick-fill.header:
+  category: general
+  description: QuickShop localization text for header.
+  audience:
+    - player
+  placeholders:
+    '0': Shops with the name
+quick-fill.hover:
+  category: general
+  description: QuickShop localization text for hover.
+  audience:
+    - player
+  placeholders:
+    '0': Name
+quick-fill.hover-arg-filled:
+  category: general
+  description: QuickShop localization text for hover arg filled.
+  audience:
+    - player
+quickshop-gui-preview:
+  category: shops
+  description: Shop-related message or label for quickshop gui preview.
+  audience:
+    - player
+    - shop-owner
+reached-maximum-can-create:
+  category: general
+  description: QuickShop localization text for reached maximum can create.
+  audience:
+    - player
+  placeholders:
+    '0': Owned
+    '1': Max
+real-player-component-hover:
+  category: general
+  description: QuickShop localization text for real player component hover.
+  audience:
+    - player
+  placeholders:
+    '0': Unique Id
+    '1': Username
+    '2': Display
+refill-success:
+  category: general
+  description: Confirmation or status message shown for refill success.
+  audience:
+    - player
+reloading-status.failed:
+  category: system
+  description: Error message shown when failed.
+  audience:
+    - server-administrator
+reloading-status.require-restart:
+  category: system
+  description: QuickShop localization text for require restart.
+  audience:
+    - server-administrator
+reloading-status.scheduled:
+  category: system
+  description: QuickShop localization text for scheduled.
+  audience:
+    - server-administrator
+reloading-status.success:
+  category: system
+  description: Confirmation or status message shown for success.
+  audience:
+    - server-administrator
+restricted-price-max:
+  category: transactions
+  description: Transaction message shown for restricted price max.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Localized item name
+    '1': Max formatted
+restricted-price-min:
+  category: transactions
+  description: Transaction message shown for restricted price min.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Localized item name
+    '1': Min formatted
+restricted-prices:
+  category: transactions
+  description: Transaction message shown for restricted prices.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Localized item name
+    '1': Min formatted
+    '2': Max formatted
+safe-mode:
+  category: general
+  description: QuickShop localization text for safe mode.
+  audience:
+    - player
+safe-mode-admin:
+  category: general
+  description: QuickShop localization text for safe mode admin.
+  audience:
+    - server-administrator
+saved-to-path:
+  category: general
+  description: Confirmation or status message shown for saved to path.
+  audience:
+    - player
+  placeholders:
+    '0': Backup was saved to
+server-crash-warning:
+  category: general
+  description: Warning message shown for server crash warning.
+  audience:
+    - player
+shop-already-owned:
+  category: shops
+  description: Shop-related message or label for shop already owned.
+  audience:
+    - player
+    - shop-owner
+shop-cannot-trade-when-freezing:
+  category: shops
+  description: Error message shown when shop cannot trade when freezing.
+  audience:
+    - player
+    - shop-owner
+shop-creation-cancelled:
+  category: shops
+  description: Shop-related message or label for shop creation cancelled.
+  audience:
+    - player
+    - shop-owner
+shop-creation-failed:
+  category: shops
+  description: Error message shown when shop creation failed.
+  audience:
+    - player
+    - shop-owner
+shop-display.disabled:
+  category: shops
+  description: Confirmation or status message shown for disabled.
+  audience:
+    - player
+    - shop-owner
+shop-display.enabled:
+  category: shops
+  description: Confirmation or status message shown for enabled.
+  audience:
+    - player
+    - shop-owner
+shop-freezed-at-location:
+  category: shops
+  description: Shop-related message or label for shop freezed at location.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Your shop
+    '1': Your shop 0 at
+shop-has-changed:
+  category: shops
+  description: Confirmation or status message shown for shop has changed.
+  audience:
+    - player
+    - shop-owner
+shop-has-no-space:
+  category: shops
+  description: Shop-related message or label for shop has no space.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Space
+    '1': Localized item name
+shop-information-not-shown-due-an-internal-error:
+  category: shops
+  description: Error message shown when shop information not shown due an internal error.
+  audience:
+    - player
+    - shop-owner
+shop-name-disallowed:
+  category: shops
+  description: Shop-related message or label for shop name disallowed.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': The shop name
+shop-name-invalid:
+  category: shops
+  description: Error message shown when shop name invalid.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': The shop name
+shop-name-not-found:
+  category: shops
+  description: Shop-related message or label for shop name not found.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': The shop named
+shop-name-success:
+  category: shops
+  description: Confirmation or status message shown for shop name success.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Shop name
+shop-name-too-long:
+  category: shops
+  description: Shop-related message or label for shop name too long.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Max length
+shop-name-unset:
+  category: shops
+  description: Shop-related message or label for shop name unset.
+  audience:
+    - player
+    - shop-owner
+shop-nolonger-freezed:
+  category: shops
+  description: Shop-related message or label for shop nolonger freezed.
+  audience:
+    - player
+    - shop-owner
+shop-not-exist:
+  category: shops
+  description: Shop-related message or label for shop not exist.
+  audience:
+    - player
+    - shop-owner
+shop-now-freezed:
+  category: shops
+  description: Shop-related message or label for shop now freezed.
+  audience:
+    - player
+    - shop-owner
+shop-out-of-space:
+  category: shops
+  description: Shop-related message or label for shop out of space.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Your shop at
+    '1': Your shop at 0
+    '2': Shop at 0 1
+shop-out-of-space-name:
+  category: shops
+  description: Shop-related message or label for shop out of space name.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Your shop
+shop-out-of-stock:
+  category: shops
+  description: Shop-related message or label for shop out of stock.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Your shop at
+    '1': Your shop at 0
+    '2': Shop at 0 1
+    '3': Localized item name
+shop-out-of-stock-name:
+  category: shops
+  description: Shop-related message or label for shop out of stock name.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Your shop
+    '1': Localized item name
+shop-owner-self-trade:
+  category: shops
+  description: Shop-related message or label for shop owner self trade.
+  audience:
+    - shop-owner
+shop-owner-self-trade-denied:
+  category: shops
+  description: Error message shown when shop owner self trade denied.
+  audience:
+    - shop-owner
+shop-purchase-cancelled:
+  category: shops
+  description: Shop-related message or label for shop purchase cancelled.
+  audience:
+    - player
+    - shop-owner
+shop-purged-start:
+  category: shops
+  description: Shop-related message or label for shop purged start.
+  audience:
+    - player
+    - shop-owner
+shop-removed-cause-ongoing-fee:
+  category: shops
+  description: Confirmation or status message shown for shop removed cause ongoing fee.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Your shop at
+shop-staff-added:
+  category: shops
+  description: Confirmation or status message shown for shop staff added.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Successfully added
+shop-staff-cleared:
+  category: shops
+  description: Shop-related message or label for shop staff cleared.
+  audience:
+    - shop-owner
+shop-staff-deleted:
+  category: shops
+  description: Shop-related message or label for shop staff deleted.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Successfully removed
+shop-staff-empty:
+  category: shops
+  description: Shop-related message or label for shop staff empty.
+  audience:
+    - shop-owner
+shop-state.freeze:
+  category: shops
+  description: Shop-related message or label for freeze.
+  audience:
+    - player
+    - shop-owner
+shop-state.frozen:
+  category: shops
+  description: Shop-related message or label for frozen.
+  audience:
+    - player
+    - shop-owner
+shop-state.unfreeze:
+  category: shops
+  description: Shop-related message or label for unfreeze.
+  audience:
+    - player
+    - shop-owner
+shop-state.unfrozen:
+  category: shops
+  description: Shop-related message or label for unfrozen.
+  audience:
+    - player
+    - shop-owner
+shop-stock-too-low:
+  category: shops
+  description: Shop-related message or label for shop stock too low.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Stock
+    '1': Localized item name
+shop-transaction-failed:
+  category: shops
+  description: Error message shown when shop transaction failed.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Debug message
+shop-type-change-price-restricted:
+  category: shops
+  description: Shop-related message or label for shop type change price restricted.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Player
+    '1': The allowed range is
+    '2': Allowed range is 1
+shop-type.buying:
+  category: shops
+  description: Shop-related message or label for buying.
+  audience:
+    - player
+    - shop-owner
+shop-type.frozen:
+  category: shops
+  description: Shop-related message or label for frozen.
+  audience:
+    - player
+    - shop-owner
+shop-type.selling:
+  category: shops
+  description: Shop-related message or label for selling.
+  audience:
+    - player
+    - shop-owner
+shops-arent-locked:
+  category: shops
+  description: Shop-related message or label for shops arent locked.
+  audience:
+    - player
+    - shop-owner
+shops-backingup:
+  category: shops
+  description: Shop-related message or label for shops backingup.
+  audience:
+    - player
+    - shop-owner
+shops-recovering:
+  category: shops
+  description: Shop-related message or label for shops recovering.
+  audience:
+    - player
+    - shop-owner
+shops-removed-in-world:
+  category: shops
+  description: Confirmation or status message shown for shops removed in world.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Shops deleted
+    '1': Been deleted in world
+sign-type-invalid:
+  category: general
+  description: Error message shown when sign type invalid.
+  audience:
+    - player
+  placeholders:
+    '0': Sign type
+signs.buying:
+  category: signs
+  description: Shop sign text used for buying.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Buying
+signs.freeze:
+  category: signs
+  description: Shop sign text used for freeze.
+  audience:
+    - player
+    - shop-owner
+signs.header:
+  category: signs
+  description: Shop sign text used for header.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': '1'
+    '1': Runtime value for placeholder {1}
+signs.header-available:
+  category: signs
+  description: Shop sign text used for header available.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Runtime value for placeholder {0}
+signs.header-unavailable:
+  category: signs
+  description: Shop sign text used for header unavailable.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Runtime value for placeholder {0}
+signs.item-duration:
+  category: signs
+  description: Shop sign text used for item duration.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Potion Duration
+signs.item-left:
+  category: signs
+  description: Shop sign text used for item left.
+  audience:
+    - player
+    - shop-owner
+signs.item-level:
+  category: signs
+  description: Shop sign text used for item level.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Level
+signs.item-right:
+  category: signs
+  description: Shop sign text used for item right.
+  audience:
+    - player
+    - shop-owner
+signs.linger-potion:
+  category: signs
+  description: Shop sign text used for linger potion.
+  audience:
+    - player
+    - shop-owner
+signs.out-of-space:
+  category: signs
+  description: Shop sign text used for out of space.
+  audience:
+    - player
+    - shop-owner
+signs.out-of-stock:
+  category: signs
+  description: Shop sign text used for out of stock.
+  audience:
+    - player
+    - shop-owner
+signs.price:
+  category: signs
+  description: Shop sign text used for price.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Formatted price
+signs.selling:
+  category: signs
+  description: Shop sign text used for selling.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Selling
+signs.splash-potion:
+  category: signs
+  description: Shop sign text used for splash potion.
+  audience:
+    - player
+    - shop-owner
+signs.stack-buying:
+  category: signs
+  description: Shop sign text used for stack buying.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Buying
+signs.stack-price:
+  category: signs
+  description: Shop sign text used for stack price.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Formatted price
+    '1': Item amount
+    '2': Item name
+signs.stack-selling:
+  category: signs
+  description: Shop sign text used for stack selling.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Selling
+signs.status-available:
+  category: signs
+  description: Shop sign text used for status available.
+  audience:
+    - player
+    - shop-owner
+signs.status-unavailable:
+  category: signs
+  description: Shop sign text used for status unavailable.
+  audience:
+    - player
+    - shop-owner
+signs.unlimited:
+  category: signs
+  description: Shop sign text used for unlimited.
+  audience:
+    - player
+    - shop-owner
+success-change-owner-to-server:
+  category: general
+  description: Confirmation or status message shown for success change owner to server.
+  audience:
+    - shop-owner
+success-created-shop:
+  category: shops
+  description: Confirmation or status message shown for success created shop.
+  audience:
+    - player
+    - shop-owner
+success-removed-shop:
+  category: shops
+  description: Confirmation or status message shown for success removed shop.
+  audience:
+    - player
+    - shop-owner
+successfully-set-player-group:
+  category: general
+  description: Confirmation or status message shown for successfully set player group.
+  audience:
+    - player
+  placeholders:
+    '0': Target final
+    '1': Group final
+successfully-set-player-permission:
+  category: general
+  description: Confirmation or status message shown for successfully set player permission.
+  audience:
+    - player
+  placeholders:
+    '0': Successfully set player
+    '1': Set player 0 permission
+    '2': Permission 1 in shop
+successfully-unset-player-group:
+  category: general
+  description: Confirmation or status message shown for successfully unset player group.
+  audience:
+    - player
+suggest-wait:
+  category: general
+  description: QuickShop localization text for suggest wait.
+  audience:
+    - player
+suite.dynmap.description:
+  category: suite
+  description: QuickShop localization text for dynmap description.
+  audience:
+    - player
+  placeholders:
+    '0': Item
+    '1': Owner
+    '2': Type
+    '3': '2'
+    '4': Price
+    '5': Location
+    '6': '5'
+    '7': 5 6
+    '8': 5 6 7
+    '9': Space
+    '10': Stock
+suite.dynmap.title:
+  category: suite
+  description: QuickShop localization text for dynmap title.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': '0'
+    '2': 0 - 1
+suite.limited.command-description:
+  category: suite
+  description: QuickShop localization text for command description.
+  audience:
+    - player
+suite.limited.quota-remove:
+  category: suite
+  description: QuickShop localization text for quota remove.
+  audience:
+    - player
+suite.limited.quota-reset-countdown:
+  category: suite
+  description: QuickShop localization text for quota reset countdown.
+  audience:
+    - player
+  placeholders:
+    '0': Shop will reset in
+suite.limited.quota-reset-everybody-successfully:
+  category: suite
+  description: Confirmation or status message shown for quota reset everybody successfully.
+  audience:
+    - player
+suite.limited.quota-reset-player-successfully:
+  category: suite
+  description: Confirmation or status message shown for quota reset player successfully.
+  audience:
+    - player
+  placeholders:
+    '0': The quota for player
+suite.limited.quota-setup:
+  category: suite
+  description: QuickShop localization text for quota setup.
+  audience:
+    - player
+suite.limited.reach-the-quota-limit:
+  category: suite
+  description: QuickShop localization text for reach the quota limit.
+  audience:
+    - player
+  placeholders:
+    '0': In this shop (
+    '1': Shop ( 0 /
+suite.limited.subtitles.subtitle:
+  category: suite
+  description: QuickShop localization text for subtitle.
+  audience:
+    - player
+  placeholders:
+    '0': You can purchase
+suite.limited.subtitles.title:
+  category: suite
+  description: QuickShop localization text for subtitles title.
+  audience:
+    - player
+suite.list.command-description:
+  category: suite
+  description: QuickShop localization text for command description.
+  audience:
+    - player
+suite.list.entry-syntax:
+  category: suite
+  description: QuickShop localization text for entry syntax.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+suite.list.entry-syntax-fallback-name:
+  category: suite
+  description: QuickShop localization text for entry syntax fallback name.
+  audience:
+    - player
+  placeholders:
+    '0': Item
+    '1': 0 X
+    '2': 1 Y
+    '3': 2 Z
+    '4': 3 World
+suite.list.hover-text:
+  category: suite
+  description: QuickShop localization text for hover text.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': Runtime value for placeholder {1}
+    '2': '1'
+    '3': 1 2
+    '4': 1 2 3
+    '5': Runtime value for placeholder {5}
+    '6': '5'
+    '7': Item amount
+suite.list.table-prefix:
+  category: suite
+  description: QuickShop localization text for table prefix.
+  audience:
+    - player
+  placeholders:
+    '0': You owned total
+suite.shopitemonly.message:
+  category: suite
+  description: QuickShop localization text for message.
+  audience:
+    - player
+supertool-is-disabled:
+  category: general
+  description: Confirmation or status message shown for supertool is disabled.
+  audience:
+    - player
+support-disable-reason.authlib-injector-detected:
+  category: general
+  description: QuickShop localization text for authlib injector detected.
+  audience:
+    - player
+support-disable-reason.bad-hosts:
+  category: general
+  description: QuickShop localization text for bad hosts.
+  audience:
+    - player
+support-disable-reason.consolespamfix-installed:
+  category: general
+  description: Confirmation or status message shown for consolespamfix installed.
+  audience:
+    - player
+support-disable-reason.hot-reload:
+  category: general
+  description: QuickShop localization text for hot reload.
+  audience:
+    - player
+support-disable-reason.modified:
+  category: general
+  description: QuickShop localization text for modified.
+  audience:
+    - player
+support-disable-reason.outdated:
+  category: general
+  description: QuickShop localization text for outdated.
+  audience:
+    - player
+support-disable-reason.privacy:
+  category: general
+  description: QuickShop localization text for privacy.
+  audience:
+    - player
+support-disable-reason.unsupported-server-software:
+  category: general
+  description: QuickShop localization text for unsupported server software.
+  audience:
+    - player
+tabcomplete.add:
+  category: commands
+  description: Tab-completion hint for add.
+  audience:
+    - player
+tabcomplete.amount:
+  category: commands
+  description: Tab-completion hint for amount.
+  audience:
+    - player
+tabcomplete.clear:
+  category: commands
+  description: Tab-completion hint for clear.
+  audience:
+    - player
+tabcomplete.clearall:
+  category: commands
+  description: Tab-completion hint for clearall.
+  audience:
+    - player
+tabcomplete.currency:
+  category: commands
+  description: Tab-completion hint for currency.
+  audience:
+    - player
+tabcomplete.item:
+  category: commands
+  description: Tab-completion hint for item.
+  audience:
+    - player
+tabcomplete.list:
+  category: commands
+  description: Tab-completion hint for list.
+  audience:
+    - player
+tabcomplete.name:
+  category: commands
+  description: Tab-completion hint for tabcomplete name.
+  audience:
+    - player
+tabcomplete.page:
+  category: commands
+  description: Tab-completion hint for page.
+  audience:
+    - player
+tabcomplete.percentage:
+  category: commands
+  description: Tab-completion hint for percentage.
+  audience:
+    - player
+tabcomplete.price:
+  category: commands
+  description: Tab-completion hint for price.
+  audience:
+    - player
+tabcomplete.purge:
+  category: commands
+  description: Tab-completion hint for purge.
+  audience:
+    - player
+tabcomplete.range:
+  category: commands
+  description: Tab-completion hint for range.
+  audience:
+    - player
+tabcomplete.remove:
+  category: commands
+  description: Tab-completion hint for remove.
+  audience:
+    - player
+tabcomplete.shop-id:
+  category: commands
+  description: Tab-completion hint for shop id.
+  audience:
+    - player
+tabcomplete.shops:
+  category: commands
+  description: Tab-completion hint for shops.
+  audience:
+    - player
+tabcomplete.tag:
+  category: commands
+  description: Tab-completion hint for tag.
+  audience:
+    - player
+tabcomplete.tagged:
+  category: commands
+  description: Tab-completion hint for tagged.
+  audience:
+    - player
+tableformat.full_line:
+  category: formatting
+  description: Localized formatting text for full line.
+  audience:
+    - player
+tableformat.left_begin:
+  category: formatting
+  description: Localized formatting text for left begin.
+  audience:
+    - player
+tableformat.left_half_line:
+  category: formatting
+  description: Localized formatting text for left half line.
+  audience:
+    - player
+tableformat.right_half_line:
+  category: formatting
+  description: Localized formatting text for right half line.
+  audience:
+    - player
+tags.avoid.added:
+  category: general
+  description: Confirmation or status message shown for added.
+  audience:
+    - player
+tags.avoid.label:
+  category: general
+  description: QuickShop localization text for avoid label.
+  audience:
+    - player
+tags.avoid.none:
+  category: general
+  description: QuickShop localization text for none.
+  audience:
+    - player
+tags.avoid.removed:
+  category: general
+  description: Confirmation or status message shown for removed.
+  audience:
+    - player
+tags.avoid.unable:
+  category: general
+  description: QuickShop localization text for unable.
+  audience:
+    - player
+tags.commands.avoid:
+  category: general
+  description: QuickShop localization text for avoid.
+  audience:
+    - player
+tags.commands.favorite:
+  category: general
+  description: QuickShop localization text for favorite.
+  audience:
+    - player
+tags.commands.tag:
+  category: general
+  description: QuickShop localization text for tag.
+  audience:
+    - player
+tags.commands.watch:
+  category: general
+  description: QuickShop localization text for watch.
+  audience:
+    - player
+tags.favorite.added:
+  category: general
+  description: Confirmation or status message shown for added.
+  audience:
+    - player
+tags.favorite.label:
+  category: general
+  description: QuickShop localization text for favorite label.
+  audience:
+    - player
+tags.favorite.none:
+  category: general
+  description: QuickShop localization text for none.
+  audience:
+    - player
+tags.favorite.removed:
+  category: general
+  description: Confirmation or status message shown for removed.
+  audience:
+    - player
+tags.favorite.unable:
+  category: general
+  description: QuickShop localization text for unable.
+  audience:
+    - player
+tags.general.database-error:
+  category: general
+  description: Error message shown when database error.
+  audience:
+    - player
+tags.general.invalid:
+  category: general
+  description: Error message shown when invalid.
+  audience:
+    - player
+  placeholders:
+    '0': M a x  t a g  l e n g t h
+tags.general.list-entry:
+  category: general
+  description: QuickShop localization text for list entry.
+  audience:
+    - player
+  placeholders:
+    '0': Pos
+    '1': Entry
+    '2': 'True'
+    '3': Shop
+tags.tag.added:
+  category: general
+  description: Confirmation or status message shown for added.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+tags.tag.cleared:
+  category: general
+  description: QuickShop localization text for cleared.
+  audience:
+    - player
+tags.tag.cleared-all:
+  category: general
+  description: QuickShop localization text for cleared all.
+  audience:
+    - player
+tags.tag.cleared-tag:
+  category: general
+  description: QuickShop localization text for cleared tag.
+  audience:
+    - player
+  placeholders:
+    '0': Normalized
+tags.tag.does-not-exist:
+  category: general
+  description: QuickShop localization text for does not exist.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+tags.tag.duplicate:
+  category: general
+  description: QuickShop localization text for duplicate.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+tags.tag.entry:
+  category: general
+  description: QuickShop localization text for entry.
+  audience:
+    - player
+  placeholders:
+    '0': Click preview
+    '1': Counter
+    '2': Command label
+    '3': 1 2
+    '4': 1 2 3 Price
+    '5': Price 4 - x
+    '6': 4 - x 5
+    '7': '- x 5 6'
+    '8': X 5 6 7
+    '9': Runtime value for placeholder {9}
+tags.tag.failed-add:
+  category: general
+  description: Error message shown when failed add.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+tags.tag.failed-remove:
+  category: general
+  description: Error message shown when failed remove.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+tags.tag.list-player-shop-title:
+  category: shops
+  description: Shop-related message or label for list player shop title.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Size
+tags.tag.list-player-shops-title:
+  category: shops
+  description: Shop-related message or label for list player shops title.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Size
+    '1': Total
+tags.tag.list-tag-shop-entry-tp:
+  category: shops
+  description: Shop-related message or label for list tag shop entry tp.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Tp
+tags.tag.list-tag-title:
+  category: general
+  description: QuickShop localization text for list tag title.
+  audience:
+    - player
+  placeholders:
+    '0': Normalized
+    '1': Size
+tags.tag.no-tagged-shops:
+  category: shops
+  description: Shop-related message or label for no tagged shops.
+  audience:
+    - player
+    - shop-owner
+tags.tag.no-tagged-shops-player:
+  category: shops
+  description: Shop-related message or label for no tagged shops player.
+  audience:
+    - player
+    - shop-owner
+tags.tag.no-tagged-shops-tag:
+  category: shops
+  description: Shop-related message or label for no tagged shops tag.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Normalized
+tags.tag.no-tags:
+  category: general
+  description: QuickShop localization text for no tags.
+  audience:
+    - player
+tags.tag.no-tags-all:
+  category: general
+  description: QuickShop localization text for no tags all.
+  audience:
+    - player
+tags.tag.removed:
+  category: general
+  description: Confirmation or status message shown for removed.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+tags.tag.shops-entry:
+  category: shops
+  description: Shop-related message or label for shops entry.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': 'True'
+    '1': Pos
+    '2': Shop i d
+    '3': Or Default
+    '4': 1 2 3 Price
+    '5': Price 4 - x
+    '6': 4 - x 5
+    '7': '- x 5 6'
+    '8': X 5 6 7
+    '9': Runtime value for placeholder {9}
+    '10': On this shop View
+tags.tag.title-avoided-shops:
+  category: shops
+  description: Shop-related message or label for title avoided shops.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': None
+tags.tag.title-favorited-shops:
+  category: shops
+  description: Shop-related message or label for title favorited shops.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': None
+tags.tag.title-watched-shops:
+  category: shops
+  description: Shop-related message or label for title watched shops.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': None
+tags.watch.added:
+  category: general
+  description: Confirmation or status message shown for added.
+  audience:
+    - player
+tags.watch.label:
+  category: general
+  description: QuickShop localization text for watch label.
+  audience:
+    - player
+tags.watch.none:
+  category: general
+  description: QuickShop localization text for none.
+  audience:
+    - player
+tags.watch.removed:
+  category: general
+  description: Confirmation or status message shown for removed.
+  audience:
+    - player
+tags.watch.unable:
+  category: general
+  description: QuickShop localization text for unable.
+  audience:
+    - player
+taxaccount-invalid:
+  category: transactions
+  description: Error message shown when taxaccount invalid.
+  audience:
+    - player
+    - shop-owner
+taxaccount-set:
+  category: transactions
+  description: Transaction message shown for taxaccount set.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': First
+taxaccount-unset:
+  category: transactions
+  description: Transaction message shown for taxaccount unset.
+  audience:
+    - player
+    - shop-owner
+that-is-locked:
+  category: general
+  description: QuickShop localization text for that is locked.
+  audience:
+    - player
+thats-not-a-number:
+  category: general
+  description: QuickShop localization text for thats not a number.
+  audience:
+    - player
+the-owner-cant-afford-to-buy-from-you:
+  category: transactions
+  description: Error message shown when the owner cant afford to buy from you.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': This item is worth
+    '1': Balance
+timeunit.after:
+  category: formatting
+  description: Localized time-unit text or time formatting for after.
+  audience:
+    - player
+timeunit.before:
+  category: formatting
+  description: Localized time-unit text or time formatting for before.
+  audience:
+    - player
+timeunit.behind:
+  category: formatting
+  description: Localized time-unit text or time formatting for behind.
+  audience:
+    - player
+timeunit.between:
+  category: formatting
+  description: Localized time-unit text or time formatting for between.
+  audience:
+    - player
+timeunit.between-format:
+  category: formatting
+  description: Localized time-unit text or time formatting for between format.
+  audience:
+    - player
+  placeholders:
+    '0': Between
+    '1': Between 0 and
+timeunit.day:
+  category: formatting
+  description: Localized time-unit text or time formatting for day.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.days:
+  category: formatting
+  description: Localized time-unit text or time formatting for days.
+  audience:
+    - player
+  placeholders:
+    '0': Days
+timeunit.future:
+  category: formatting
+  description: Localized time-unit text or time formatting for future.
+  audience:
+    - player
+  placeholders:
+    '0': In
+timeunit.future-plain-text:
+  category: formatting
+  description: Localized time-unit text or time formatting for future plain text.
+  audience:
+    - player
+timeunit.hour:
+  category: formatting
+  description: Localized time-unit text or time formatting for hour.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.hours:
+  category: formatting
+  description: Localized time-unit text or time formatting for hours.
+  audience:
+    - player
+  placeholders:
+    '0': Hours
+timeunit.justnow:
+  category: formatting
+  description: Localized time-unit text or time formatting for justnow.
+  audience:
+    - player
+timeunit.longtimeago:
+  category: formatting
+  description: Localized time-unit text or time formatting for longtimeago.
+  audience:
+    - player
+timeunit.minute:
+  category: formatting
+  description: Localized time-unit text or time formatting for minute.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.minutes:
+  category: formatting
+  description: Localized time-unit text or time formatting for minutes.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.month:
+  category: formatting
+  description: Localized time-unit text or time formatting for month.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.months:
+  category: formatting
+  description: Localized time-unit text or time formatting for months.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.recent:
+  category: formatting
+  description: Localized time-unit text or time formatting for recent.
+  audience:
+    - player
+timeunit.scheduled:
+  category: formatting
+  description: Localized time-unit text or time formatting for scheduled.
+  audience:
+    - player
+timeunit.scheduled-at:
+  category: formatting
+  description: Localized time-unit text or time formatting for scheduled at.
+  audience:
+    - player
+  placeholders:
+    '0': Scheduled at
+timeunit.scheduled-in:
+  category: formatting
+  description: Localized time-unit text or time formatting for scheduled in.
+  audience:
+    - player
+  placeholders:
+    '0': Scheduled in
+timeunit.second:
+  category: formatting
+  description: Localized time-unit text or time formatting for second.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.seconds:
+  category: formatting
+  description: Localized time-unit text or time formatting for seconds.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.std-format:
+  category: formatting
+  description: Localized time-unit text or time formatting for std format.
+  audience:
+    - player
+timeunit.std-past-format:
+  category: formatting
+  description: Localized time-unit text or time formatting for std past format.
+  audience:
+    - player
+  placeholders:
+    '0': 4 3 2 1
+    '1': 5 4 3 2
+    '2': 5 4 3
+    '3': 5 4
+    '4': '5'
+    '5': Runtime value for placeholder {5}
+timeunit.std-time-format:
+  category: formatting
+  description: Localized time-unit text or time formatting for std time format.
+  audience:
+    - player
+timeunit.week:
+  category: formatting
+  description: Localized time-unit text or time formatting for week.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.weeks:
+  category: formatting
+  description: Localized time-unit text or time formatting for weeks.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.year:
+  category: formatting
+  description: Localized time-unit text or time formatting for year.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+timeunit.years:
+  category: formatting
+  description: Localized time-unit text or time formatting for years.
+  audience:
+    - player
+  placeholders:
+    '0': Runtime value for placeholder {0}
+trading-in-creative-mode-is-disabled:
+  category: general
+  description: Confirmation or status message shown for trading in creative mode is disabled.
+  audience:
+    - player
+transfer-accepted-fromside:
+  category: general
+  description: QuickShop localization text for transfer accepted fromside.
+  audience:
+    - player
+  placeholders:
+    '0': Updated
+transfer-accepted-toside:
+  category: general
+  description: QuickShop localization text for transfer accepted toside.
+  audience:
+    - player
+  placeholders:
+    '0': From
+transfer-ask:
+  category: general
+  description: QuickShop localization text for transfer ask.
+  audience:
+    - player
+  placeholders:
+    '0': Request will expire after
+transfer-failed-some:
+  category: general
+  description: Error message shown when transfer failed some.
+  audience:
+    - player
+transfer-no-buy:
+  category: general
+  description: QuickShop localization text for transfer no buy.
+  audience:
+    - player
+transfer-no-pending-operation:
+  category: general
+  description: QuickShop localization text for transfer no pending operation.
+  audience:
+    - player
+transfer-no-self:
+  category: general
+  description: QuickShop localization text for transfer no self.
+  audience:
+    - player
+transfer-rejected-fromside:
+  category: general
+  description: QuickShop localization text for transfer rejected fromside.
+  audience:
+    - player
+  placeholders:
+    '0': To
+transfer-rejected-toside:
+  category: general
+  description: QuickShop localization text for transfer rejected toside.
+  audience:
+    - player
+  placeholders:
+    '0': From
+transfer-request:
+  category: general
+  description: QuickShop localization text for transfer request.
+  audience:
+    - player
+  placeholders:
+    '0': Command sender
+transfer-sent:
+  category: general
+  description: QuickShop localization text for transfer sent.
+  audience:
+    - player
+  placeholders:
+    '0': Shop Transfer-request sent to
+transfer-single-ask:
+  category: general
+  description: QuickShop localization text for transfer single ask.
+  audience:
+    - player
+  placeholders:
+    '0': Request will expire after
+transfer-single-request:
+  category: general
+  description: QuickShop localization text for transfer single request.
+  audience:
+    - player
+  placeholders:
+    '0': Player
+transferall-ask:
+  category: general
+  description: QuickShop localization text for transferall ask.
+  audience:
+    - player
+  placeholders:
+    '0': Request will expire after
+translate-not-completed-yet-click:
+  category: general
+  description: QuickShop localization text for translate not completed yet click.
+  audience:
+    - player
+  placeholders:
+    '0': Translation of the language
+    '1': Not completed yet by
+translate-not-completed-yet-url:
+  category: general
+  description: QuickShop localization text for translate not completed yet url.
+  audience:
+    - player
+  placeholders:
+    '0': Translation of the language
+    '1': Not completed yet by
+    '2': Improving the translation Browse
+translation-author:
+  category: general
+  description: QuickShop localization text for translation author.
+  audience:
+    - player
+translation-contributors:
+  category: general
+  description: QuickShop localization text for translation contributors.
+  audience:
+    - player
+translation-country:
+  category: general
+  description: QuickShop localization text for translation country.
+  audience:
+    - player
+translation-version:
+  category: general
+  description: QuickShop localization text for translation version.
+  audience:
+    - player
+unknown-owner:
+  category: general
+  description: QuickShop localization text for unknown owner.
+  audience:
+    - shop-owner
+unknown-player:
+  category: general
+  description: QuickShop localization text for unknown player.
+  audience:
+    - player
+unlimited-shop-owner-changed:
+  category: shops
+  description: Confirmation or status message shown for unlimited shop owner changed.
+  audience:
+    - shop-owner
+  placeholders:
+    '0': Q user
+unlimited-shop-owner-keeped:
+  category: shops
+  description: Shop-related message or label for unlimited shop owner keeped.
+  audience:
+    - shop-owner
+updatenotify.buttontitle:
+  category: updates
+  description: Update notification text for buttontitle.
+  audience:
+    - server-administrator
+updatenotify.label.basic:
+  category: updates
+  description: Update notification text for basic.
+  audience:
+    - server-administrator
+updatenotify.label.bukkitdev:
+  category: updates
+  description: Update notification text for bukkitdev.
+  audience:
+    - server-administrator
+updatenotify.label.github:
+  category: updates
+  description: Update notification text for github.
+  audience:
+    - server-administrator
+updatenotify.label.lts:
+  category: updates
+  description: Update notification text for lts.
+  audience:
+    - server-administrator
+updatenotify.label.master:
+  category: updates
+  description: Update notification text for master.
+  audience:
+    - server-administrator
+updatenotify.label.modrinth:
+  category: updates
+  description: Update notification text for modrinth.
+  audience:
+    - server-administrator
+updatenotify.label.nbtapi:
+  category: updates
+  description: Update notification text for nbtapi.
+  audience:
+    - server-administrator
+updatenotify.label.ore:
+  category: updates
+  description: Update notification text for ore.
+  audience:
+    - server-administrator
+updatenotify.label.paper:
+  category: updates
+  description: Update notification text for paper.
+  audience:
+    - server-administrator
+updatenotify.label.papermc:
+  category: updates
+  description: Update notification text for papermc.
+  audience:
+    - server-administrator
+updatenotify.label.polymart:
+  category: updates
+  description: Update notification text for polymart.
+  audience:
+    - server-administrator
+updatenotify.label.qualityverifyed:
+  category: updates
+  description: Update notification text for qualityverifyed.
+  audience:
+    - server-administrator
+updatenotify.label.spigotmc:
+  category: updates
+  description: Update notification text for spigotmc.
+  audience:
+    - server-administrator
+updatenotify.label.stable:
+  category: updates
+  description: Update notification text for stable.
+  audience:
+    - server-administrator
+updatenotify.label.unstable:
+  category: updates
+  description: Update notification text for unstable.
+  audience:
+    - server-administrator
+updatenotify.list:
+  category: updates
+  description: Update notification text for list.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': Runtime value for placeholder {0}
+    '1': You are still using
+updatenotify.onekeybuttontitle:
+  category: updates
+  description: Update notification text for onekeybuttontitle.
+  audience:
+    - server-administrator
+updatenotify.remote-disable-warning:
+  category: updates
+  description: Update notification text for remote disable warning.
+  audience:
+    - server-administrator
+  placeholders:
+    '0': From our SpigotMC page
+virtual-player-component-hover:
+  category: general
+  description: QuickShop localization text for virtual player component hover.
+  audience:
+    - player
+  placeholders:
+    '0': Unique Id
+    '1': Username
+    '2': Display
+warn-to-paste:
+  category: general
+  description: Warning message shown for warn to paste.
+  audience:
+    - player
+world-not-exists:
+  category: general
+  description: QuickShop localization text for world not exists.
+  audience:
+    - player
+  placeholders:
+    '0': First
+you-cant-afford-a-new-shop:
+  category: shops
+  description: Message shown when a player cannot afford the configured cost to create a new shop.
+  audience:
+    - player
+  placeholders:
+    '0': Formatted shop creation cost
+you-cant-afford-shop-naming:
+  category: shops
+  description: Error message shown when you cant afford shop naming.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': Shop naming it costs
+you-cant-afford-to-buy:
+  category: transactions
+  description: Error message shown when you cant afford to buy.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': It costs
+    '1': Balance
+you-cant-afford-to-change-price:
+  category: transactions
+  description: Error message shown when you cant afford to change price.
+  audience:
+    - player
+    - shop-owner
+  placeholders:
+    '0': It costs
+you-cant-create-shop-in-there:
+  category: shops
+  description: Error message shown when you cant create shop in there.
+  audience:
+    - player
+    - shop-owner
+you-dont-have-that-many-items:
+  category: general
+  description: QuickShop localization text for you dont have that many items.
+  audience:
+    - player
+  placeholders:
+    '0': Count
+    '1': Localized item name
