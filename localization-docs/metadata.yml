@@ -1,0 +1,21 @@
+# Override file to override generated metadata.
+#
+# Example:
+# gui.staff.title:
+#   category: gui
+#   description: Title displayed at the top of the shop staff management GUI.
+#   audience:
+#     - shop-owner
+#
+# player-bought-from-your-store-tax:
+#   category: transactions
+#   description: Sent to a shop owner when another player purchases from their shop and tax is charged.
+#   audience:
+#     - shop-owner
+#   placeholders:
+#     "0": Buyer
+#     "1": Amount purchased
+#     "2": Item
+#     "3": Earnings
+#     "4": Tax charged
+{}
